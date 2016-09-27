@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>飞宇信息化系统</title>
+
+  <!--icheck-->
+  <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
+  <link href="js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="js/iCheck/skins/square/square.css" rel="stylesheet">
+  <!-- <link href="js/iCheck/skins/square/red.css" rel="stylesheet"> -->
+  <link href="js/iCheck/skins/square/yellow.css" rel="stylesheet">
+  <link href="js/iCheck/skins/flat/yellow.css" rel="stylesheet">
+  <link href="js/iCheck/skins/minimal/yellow.css" rel="stylesheet">
+  <link href="js/iCheck/skins/polaris/yellow.css" rel="stylesheet">
+  <link href="js/iCheck/skins/futurico/yellow.css" rel="stylesheet">
+  <link rel="stylesheet" href="js/ckeditor/skins/moono/editor.css">
+
+  <!--pickers css-->
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-colorpicker/css/colorpicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/css/datetimepicker-custom.css" />
+
+  <!--dashboard calendar-->
+  <link href="css/clndr.css" rel="stylesheet">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/fileinput.css">
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+  <body>
+
+    <!-- Modal 新增消息 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-Massage">
+        <a href="#">新增消息 </a>
+    </div>
+    <div class="modal fade" id="add-Massage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增消息</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">标题:</label>
+                        <div class="col-md-10">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">公告:</label>
+                        <div class="col-md-3">
+                          <label class="control-label">
+                               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                               普通公告
+                           </label>
+                        </div>
+                        <div class="col-md-3">
+                          <label class="control-label">
+                               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                               非常重要
+                           </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">类型:</label>
+                        <div class="col-md-3">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>选择类型</option>
+                                <option>门类</option>
+                                <option>窗类</option>
+                             </select>
+                        </div>
+                        <div class="col-md-3">
+                             <label class="control-label">
+                                 <input type="checkbox">内部通知
+                             </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">通知区域:</label>
+                        <div class="col-md-4">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>西北战区</option>
+                                <option>西南战区</option>
+                             </select>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>成都</option>
+                                <option>北京</option>
+                                <option>深圳</option>
+                             </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>成都市</option>
+                                <option>绵阳</option>
+                                <option>达州</option>
+                             </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">正文:</label>
+                        <textarea name="name" rows="6" class="col-md-10" placeholder="请输入正文"></textarea>
+                    </div>
+                    <div class="form-group">
+                         <label class="control-label col-md-3 no-padding">超大文档下载地址:</label>
+                         <div class="col-md-9">
+                             <input name="name" class="form-control" placeholder="http://" type="text">
+                         </div>
+                    </div>
+                    <div class="form-group">
+                         <label class="control-label col-md-2 no-padding">附件文档:</label>
+                         <div class="btn btn-primary btn-file">
+              							<span>上传</span>
+              							<input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+              					 </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Modal 新增订单 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-Order">
+        <a href="#">新增订单 </a>
+    </div>
+    <div class="modal fade" id="add-Order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-Order" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增订单</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">经销商:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" placeholder="经销商1" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">经销商:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" placeholder="门店1" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">客户姓名:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">客户电话:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">客户地址:</label>
+                        <div class="col-md-5">
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>四川省</option>
+                                  <option>北京</option>
+                                  <option>上海</option>
+                               </select>
+                          </div>
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>成都市</option>
+                                  <option>北京市</option>
+                                  <option>上海市</option>
+                               </select>
+                          </div>
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>青羊区</option>
+                                  <option>武侯区</option>
+                                  <option>锦江区</option>
+                               </select>
+                          </div>
+
+                        </div>
+                        <label class="control-label col-md-1 no-padding">详细地址:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+    <!-- Modal 新增经销商 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal"  data-target="#add-Dealer">
+        <a href="#">新增经销商 </a>
+    </div>
+    <div class="modal fade" id="add-Dealer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-Dealer" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增经销商</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">编号:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">名称:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">法人姓名:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">加盟日期:</label>
+                        <div class="col-md-5">
+                          <div data-date-minviewmode="months" data-date-viewmode="years" data-date-format="mm/yyyy" data-date="102/2012" class="input-append date dpMonths">
+                               <input type="text" readonly="" value="02/2012" size="16" class="form-control">
+                               <span class="input-group-btn add-on">
+                                 <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
+                               </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">客户地址:</label>
+                        <div class="col-md-11">
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>四川省</option>
+                                  <option>北京</option>
+                                  <option>上海</option>
+                               </select>
+                          </div>
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>成都市</option>
+                                  <option>北京市</option>
+                                  <option>上海市</option>
+                               </select>
+                          </div>
+                          <div class="col-sm-4 col-padding-box">
+                              <select class="form-control input-group input-large custom-date-range">
+                                  <option>青羊区</option>
+                                  <option>武侯区</option>
+                                  <option>锦江区</option>
+                               </select>
+                          </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-1 no-padding">详细地址:</label>
+                      <div class="col-md-11">
+                          <input name="name" class="form-control" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">手机:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">固定电话:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">负责人:</label>
+                        <div class="col-md-5">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>四川省</option>
+                                <option>北京</option>
+                                <option>上海</option>
+                             </select>
+                        </div>
+                        <label class="control-label col-md-1 no-padding">等级:</label>
+                        <div class="col-md-5">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>四川省</option>
+                                <option>北京</option>
+                                <option>上海</option>
+                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">所辖门店:</label>
+
+
+                        <div class="col-md-11">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-Dealer-store">添加门店</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 ">
+                           <table  class="col-md-12 table-content">
+                              <thead>
+                                  <tr>
+                                     <th> 门店编号 </th>
+                                     <th> 名称 </th>
+                                     <th> 地址 </th>
+                                     <th> 店长 </th>
+                                     <th> 联系电话 </th>
+                                     <th> 送货地址 </th>
+                                     <th> 装修状态 </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td> MD01 </td>
+                                    <td> 富森美门店 </td>
+                                    <td> 城南富森美2A21 </td>
+                                    <td> 阿旺 </td>
+                                    <td> 13333333333 </td>
+                                    <td> 城南富森美仓库 </td>
+                                 </tr>
+                                 <tr>
+                                    <td> MD01 </td>
+                                    <td> 富森美门店 </td>
+                                    <td> 城南富森美2A21 </td>
+                                    <td> 阿旺 </td>
+                                    <td> 13333333333 </td>
+                                    <td> 城南富森美仓库 </td>
+                                 </tr>
+                                 <tr>
+                                    <td> MD01 </td>
+                                    <td> 富森美门店 </td>
+                                    <td> 城南富森美2A21 </td>
+                                    <td> 阿旺 </td>
+                                    <td> 13333333333 </td>
+                                    <td> 城南富森美仓库 </td>
+                                 </tr>
+                                 <tr>
+                                    <td> MD01 </td>
+                                    <td> 富森美门店 </td>
+                                    <td> 城南富森美2A21 </td>
+                                    <td> 阿旺 </td>
+                                    <td> 13333333333 </td>
+                                    <td> 城南富森美仓库 </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer clearfix">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 新增经销商门店 action -->
+    <!-- <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-Dealer-store">
+        <a href="#">新增经销商门店 </a>
+    </div> -->
+    <div class="modal fade" id="add-Dealer-store" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-Dealer-store" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增经销商门店</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">编号:</label>
+                        <div class="col-md-3">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">名称:</label>
+                        <div class="col-md-3">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">门店面积:</label>
+                        <div class="col-md-3">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">手机:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                        <label class="control-label col-md-1 no-padding">固定电话:</label>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">地址:</label>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>四川省</option>
+                              <option>北京</option>
+                              <option>上海</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>成都市</option>
+                              <option>绵阳</option>
+                              <option>达州</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>武侯区</option>
+                              <option>锦江区</option>
+                              <option>青羊区</option>
+                           </select>
+                        </div>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-1 no-padding">送货地址:</label>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>四川省</option>
+                              <option>北京</option>
+                              <option>上海</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>成都市</option>
+                              <option>绵阳</option>
+                              <option>达州</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                          <select class="form-control input-group input-large custom-date-range">
+                              <option>武侯区</option>
+                              <option>锦江区</option>
+                              <option>青羊区</option>
+                           </select>
+                        </div>
+                        <div class="col-md-5">
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 新增方案 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-plan">
+        <a href="#">新增方案 </a>
+    </div>
+    <div class="modal fade" id="add-plan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-plan" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增方案</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-7">
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">详细地址:</label>
+                            <div class="col-ms-9 col-xs-9">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">创建时间:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <div class="input-group input-large custom-date-range" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                                   <input type="text" class="form-control dpd1" name="from" placeholder="开始时间">
+                                   <span class="input-group-addon">至</span>
+                                   <input type="text" class="form-control dpd2" name="to" placeholder="结束时间">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">创建时间:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                </textarea>
+                            </div>
+                        </div>
+                       <div class="form-group">
+                          <label class="control-label col-sm-3 no-padding">是否强制:</label>
+                          <div class="col-sm-5">
+                            <label class="control-label">
+                                <input type="checkbox">
+                                 强制参加
+                             </label>
+                          </div>
+                          <div class="col-sm-4 no-padding">
+                            <label class="control-label">
+                                <input type="checkbox">
+                                 发布公众号
+                             </label>
+                          </div>
+                       </div>
+                       <div class="form-group">
+                             <label class="control-label col-md-4 no-padding">宣传品下载地址:</label>
+                             <div class="col-md-8">
+                                 <input name="name" class="form-control" placeholder="http://" type="text">
+                             </div>
+                        </div>
+                       <div class="form-group">
+                           <label class="control-label col-md-3 no-padding">方案文档:</label>
+                           <div class="btn btn-primary btn-file">
+                							<span>上传</span>
+                							<input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+                					 </div>
+                       </div>
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <div class="col-sm-12">
+                            <label class="control-label col-md-3 no-padding">适用范围:</label>
+                            <div class="menu-list">
+                                  <a href="#index.html" class="btn btn-default">
+                                      <b class="caret"></b>
+                                      <span>全国</span>
+                                  </a>
+                              		<ul class="sub-menu-list">
+                                      <!-- <li class="dropdown open">
+                                            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-expanded="true">
+                                                <b class="caret"></b>西南战区
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">四川省</a></li>
+                                                <li><a href="#">云南省</a></li>
+                                            </ul>
+                                  		</li> -->
+                                      <li>
+                                        <select class="form-control input-group input-large custom-date-range">
+                                            <option>选择类型</option>
+                                            <option>门类</option>
+                                            <option>窗类</option>
+                                         </select>
+                                      </li>
+                                      <li>
+                                          <select class="form-control input-group input-large custom-date-range">
+                                              <option>选择类型</option>
+                                              <option>门类</option>
+                                              <option>窗类</option>
+                                           </select>
+                                  		</li>
+                              		</ul>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 upload-img-box">
+                            <label class="control-label col-sm-2">效果图:</label>
+                            <!-- <div class="col-sm-10 no-padding"> -->
+                                <div class="btn btn-info btn-file btn-upload-img col-sm-2">
+                       							<span>+</span>
+                       							<input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+                       					</div>
+                                <div class="col-sm-2 upload-img">
+                                   <img src="./images/avatar-mini.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-2 upload-img">
+                                   <img src="./images/avatar-mini.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-2 upload-img">
+                                   <img src="./images/avatar-mini.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-2 upload-img">
+                                   <img src="./images/avatar-mini.jpg" alt="" />
+                                </div>
+                            <!-- </div> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 新增案例 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-case">
+        <a href="#">新增案例 </a>
+    </div>
+    <div class="modal fade" id="add-case" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-case" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增案例</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">案例名称:</label>
+                            <div class="col-ms-10 col-xs-10">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-2 no-padding">案例属性:</label>
+                            <div class="col-lg-12 table-box">
+                                <table class="table-content">
+                                   <tr>
+                                      <th class="selected">风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td class="selected">混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">案例名称:</label>
+                            <div class="col-ms-10 col-xs-10">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">案例简介:</label>
+                            <textarea name="name" rows="6" class="col-sm-10" placeholder="请输入案例简介"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">初始点赞数:</label>
+                            <div class="col-ms-2 col-xs-2 no-padding">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                            <label class="control-label padding-box">初始评论导入模板:</label>
+                            <div class="btn btn-default btn-file no-margin">
+                                  <span>上传</span>
+                                  <input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">效果图:</label>
+                        </div>
+
+                        <div class="btn btn-info btn-file btn-upload-img col-sm-3">
+                            <span>+</span>
+                            <input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 巡店安排 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-patrol">
+        <a href="#">巡店安排 </a>
+    </div>
+    <div class="modal fade" id="add-patrol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-patrol" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">巡店安排</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-7">
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">计划名称:</label>
+                            <div class="col-ms-9 col-xs-9">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">执行日期:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <div class="input-group input-large custom-date-range" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                                   <input type="text" class="form-control dpd1" name="from" placeholder="开始时间">
+                                   <span class="input-group-addon">至</span>
+                                   <input type="text" class="form-control dpd2" name="to" placeholder="结束时间">
+                                </div>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">巡店要求:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                </textarea>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <div class="col-sm-3 no-padding">
+                                <!-- <div class="form-group"> -->
+                                     <label class="control-label pull-right">巡店人员:</label>
+                                <!-- </div>
+                                <div class="form-group"> -->
+                                     <button type="button" name="button" class="btn btn-default pull-right">添加</button>
+                                <!-- </div> -->
+                            </div>
+
+                           <div class="col-sm-9 col-xs-9">
+                               <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                               </textarea>
+                           </div>
+                       </div>
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <div class="col-sm-12">
+                            <label class="control-label col-md-3 no-padding">适用范围:</label>
+                            <div class="menu-list">
+                                  <a href="#index.html" class="btn btn-default">
+                                      <b class="caret"></b>
+                                      <span>全国</span>
+                                  </a>
+                              		<ul class="sub-menu-list">
+                                      <!-- <li class="dropdown open">
+                                            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-expanded="true">
+                                                <b class="caret"></b>西南战区
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">四川省</a></li>
+                                                <li><a href="#">云南省</a></li>
+                                            </ul>
+                                  		</li> -->
+                                      <li>
+                                        <select class="form-control input-group input-large custom-date-range">
+                                            <option>选择类型</option>
+                                            <option>门类</option>
+                                            <option>窗类</option>
+                                         </select>
+                                      </li>
+                                      <li>
+                                          <select class="form-control input-group input-large custom-date-range">
+                                              <option>选择类型</option>
+                                              <option>门类</option>
+                                              <option>窗类</option>
+                                           </select>
+                                  		</li>
+                              		</ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 日常汇报 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-report">
+        <a href="#">日常汇报 </a>
+    </div>
+    <div class="modal fade" id="add-report" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-report" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">日常汇报</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-7">
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">汇报日期:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <div data-date-minviewmode="months" data-date-viewmode="years" data-date-format="mm/yyyy" data-date="102/2012" class="input-append date dpMonths">
+                                   <input type="text" value="02/2012" size="16" class="form-control">
+                                   <span class="input-group-btn add-on">
+                                     <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
+                                   </span>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">经销商:</label>
+                            <div class="col-ms-9 col-xs-9">
+                                <select class="form-control input-group input-large custom-date-range">
+                                    <option>成都市</option>
+                                    <option>北京市</option>
+                                    <option>上海市</option>
+                                </select>
+                            </div>
+                        </div>
+                       <div class="form-group">
+                             <label class="control-label col-sm-3 no-padding">汇报对象:</label>
+                             <div class="col-ms-9 col-xs-9">
+                                 <select class="form-control input-group input-large custom-date-range">
+                                     <option>成都市</option>
+                                     <option>北京市</option>
+                                     <option>上海市</option>
+                                 </select>
+                             </div>
+                         </div>
+                       <div class="form-group">
+                           <label class="control-label col-sm-3 no-padding">关联方案:</label>
+                           <div class="col-ms-9 col-xs-9">
+                               <input name="name" class="form-control" type="text">
+                           </div>
+                       </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">计划:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <div class="plan-box">
+                                   <a href="#">315飞宇促销活动</a>
+                                   <a href="#">西南促销专项活动</a>
+                                   <a href="#">上半年巡店计划</a>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">汇报内容:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                </textarea>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">汇报图片:</label>
+                        </div>
+
+                        <div class="btn btn-info btn-file btn-upload-img col-sm-3">
+                            <span>+</span>
+                            <input id="file-0a" class="file" type="file" multiple="" data-min-file-count="1">
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="">
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="">
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Modal 消息通知 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-massage">
+        <a href="#">消息通知 </a>
+    </div>
+    <div class="modal fade" id="add-massage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-massage" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">关于xxx会议的通知 <small class="pull-right">由xxx发布 <time class="pull-right">2016-6-30 15:30</time> </small></h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="form-group">
+                          <textarea name="name" rows="10" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                                    会议通知
+                           各科室、处属各单位 ：   为贯彻落实上级会议精神，总结回顾2012年工作，
+                           安排部署2013年工作，经研究，决定召开管理处工作会议暨职工迎春联欢会，
+                           现将有关事项通知如下;
+                               一、会议时间   2013年2月5日（星期二）上午8；30 —12；00
+                               二、会议地点  管理处四楼会议室
+                               三、会议议程
+                                  1、通报全省高速公路运营管理大检查情况
+                                  2、宣读省交通厅、厅高管局、省高管中心先进集体 暨先进个人表彰决定....
+                          </textarea>
+                       </div>
+                   </div>
+                   <div class=" col-sm-12">
+                       <div class="form-group">
+                          <label class="control-label col-md-2">附件:</label>
+                          <a href="#">关于会议讨论内容.doc</a>
+                       </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Modal 案例分享 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#share-case">
+        <a href="#">案例分享 </a>
+    </div>
+    <div class="modal fade" id="share-case" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-case" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">案例分享</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">案例名称:</label>
+                            <span>xxx03产品阳台安装案例</span>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-2 no-padding">案例属性:</label>
+                            <div class="col-lg-12 table-box">
+                                <table class="table-content">
+                                   <tr>
+                                      <th class="selected">风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td class="selected">混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                   <tr>
+                                      <th>风格</th>
+                                      <td>实木 </td>
+                                      <td>混合 </td>
+                                      <td>铝材 </td>
+                                      <td>不锈钢 </td>
+                                   </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">关联产品:</label>
+                            <div class="col-ms-10 col-xs-10">
+                                xxx03
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">案例简介:</label>
+                            <div class="col-sm-10">客户要求简单舒适，功能使用为主，此方案设计简单大方，费用1200/M2,适用于小户型。</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 no-padding">关联产品:</label>
+                            <div class="col-ms-10 col-xs-10">
+                                <a href="#">素菜打包文件.rar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 ">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">效果图:</label>
+                        </div>
+                        <div class="upload-img col-sm-3">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                        <div class="col-sm-3 upload-img">
+                           <img src="./images/avatar-mini.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Modal 方案预览 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-Plan-preview">
+        <a href="#">方案预览 </a>
+    </div>
+    <div class="modal fade" id="add-Plan-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-Plan-preview" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">方案预览—315公司营销方案</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label class="control-label">方案名称：</label>
+                            <span>315公司营销方案</span>
+                        </div>
+                        <div class="col-sm-4 no-padding">
+                            <label class="control-label">方案名称：</label>
+                            <span><time>2016-6-30</time>发布人：李四</span>
+                        </div>
+                        <div class="col-sm-4 no-padding">
+                            <label class="control-label">执行时间：</label>
+                            <span><time>2016-11-1</time>至<time>2016-11-15</time></span>
+                        </div>
+                    </div>
+
+
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+                            </ol>
+                              <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item">
+                                    <img src="./images/u1759.png" alt="...">
+                                </div>
+                                <div class="item">
+                                  <img src="./images/u1761.png" alt="...">
+                                </div>
+                                <div class="item active">
+                                  <img src="./images/u1763.png" alt="...">
+                                </div>
+                            </div>
+
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
+                                </a>
+                        </div>
+
+
+                    <div class="form-group">
+                            <textarea name="name" rows="10" class="col-sm-12 col-xs-12" placeholder="请输入正文">
+                                                          各位亲爱的经销商家人们：
+                              为帮助各位经销商更好的执行3.15活动，现特将“飞宇门窗3.15活动执行文案”下发，具体要求如下：
+                              1、3月5日开始便可启动“2016年3.15飞宇门窗“服务进万家”活动，可以安排专人进小区驻点，所有人均可登记信息申请免费检查、维护门窗产品，不限任何品牌。也可在门店进行宣传。备注：上门检查、维护时间可在3月之后，自行安排；人员是各经销商店面安装维护人员。
+                              2、雅麒系列产品出厂价，公司给予经销商特别支持9.5折。【政策享受时间：3月12日-3月25日下的订单】
+                              3、锋景断桥礼品政策：所有上样且参加3.15活动的经销商，均可享受公司“买3赠1,以此类推，此活动，经销商订购礼品总数不得超过20个（包括购买数量和赠送数量）”厨具三件套政策。
+                              活动结束后的5个工作日则需提交活动照片，如领取了公司礼品而未开展活动者，则按实际数量原价购买礼品。
+                              4、锋景断桥新品在销售中原则上不做任何促销，但各经销商可根据实际情况而定，可申请样板房，最低经销商给予消费者折扣8.5折，但公司对经销商锋景断桥除礼品(厨具三件套)政策外，无政策支持。
+                              5、经销商必须严格按照3.15活动参与细则，切实落地执行。经销商在3月5日前将物料布置到位，并将照片拍发至销售经理和官方群，活动物料不得少于：海报、地贴、礼品、横幅、宣传单、门展、POP吊旗、红包墙。
+                              6、3.15活动期间，各经销商需将活动进行拍照，小区驻点照片、签单送礼照片、团队合影、店面门头、签单客户合影、活动现场等照片，发送至官方群进行分享。
+
+                              营销中心   市场部
+                              2016年1月20日
+                            </textarea>                  
+                    </div>
+                    <div class="form-group directory-info-row">  
+                        <ul class="social-links">
+                            <li>
+                                <a data-placement="top" class="tooltips" href="" data-original-title="赞">
+                                    <i class="fa fa-thumbs-up"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" class="tooltips" href="" data-original-title="踩">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" class="tooltips" href="" data-original-title="评论">
+                                    <i class="fa fa-comments"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" class="tooltips" href="" data-original-title="预览" data-toggle="modal" data-target="#add-Plan-preview-modal">
+                                    <i class="fa fa-camera"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal">关闭预览</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 方案预览内容弹出框 action -->
+
+    <div class="modal fade" id="add-Plan-preview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-Plan-preview" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">方案预览—315公司营销方案</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="form-group">
+                        <div class="col-md-2 col-sm-2 flex-box user-box">
+                            <i class="fa fa-user"></i>
+                            <span>张力</span>
+                        </div>
+                        <div class="col-md-8 col-sm-8 flex-box text-box no-padding">
+                            <p class="col-sm-12 col-xs-12">XXX经销商
+                                <span>xxx门店</span>
+                                <time>2016-11-1 
+                                    <span>13:40</span>
+                                </time>
+                            </p>
+                            <p class="col-sm-12 col-xs-12">按飞宇要求实施活动方案，具体见照片按飞宇要求实施活动方案，具体见照片</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <img src="./images/u1763.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2 col-sm-2 flex-box user-box">
+                            <i class="fa fa-user"></i>
+                            <span>张力</span>
+                        </div>
+                        <div class="col-md-8 col-sm-8 flex-box text-box no-padding">
+                            <p class="col-sm-12 col-xs-12">XXX经销商
+                                <span>xxx门店</span>
+                                <time>2016-11-1 
+                                    <span>13:40</span>
+                                </time>
+                            </p>
+                            <p class="col-sm-12 col-xs-12">活动现场相当火爆，详见照片</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <img src="./images/u1763.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2 col-sm-2 flex-box user-box">
+                            <i class="fa fa-user"></i>
+                            <span>张力</span>
+                        </div>
+                        <div class="col-md-8 col-sm-8 flex-box text-box no-padding">
+                            <p class="col-sm-12 col-xs-12">XXX经销商
+                                <span>xxx门店</span>
+                                <time>2016-11-1 
+                                    <span>13:40</span>
+                                </time>
+                            </p>
+                            <p class="col-sm-12 col-xs-12">活动现场相当火爆，详见照片</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <img src="./images/u1763.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2 col-sm-2 flex-box user-box">
+                            <i class="fa fa-user"></i>
+                            <span>张力</span>
+                        </div>
+                        <div class="col-md-8 col-sm-8 flex-box text-box no-padding">
+                            <p class="col-sm-12 col-xs-12">XXX经销商
+                                <span>xxx门店</span>
+                                <time>2016-11-1 
+                                    <span>13:40</span>
+                                </time>
+                            </p>
+                            <p class="col-sm-12 col-xs-12">活动现场相当火爆，详见照片</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <img src="./images/u1763.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2 col-sm-2 flex-box user-box">
+                            <i class="fa fa-user"></i>
+                            <span>张力</span>
+                        </div>
+                        <div class="col-md-8 col-sm-8 flex-box text-box no-padding">
+                            <p class="col-sm-12 col-xs-12">XXX经销商
+                                <span>xxx门店</span>
+                                <time>2016-11-1 
+                                    <span>13:40</span>
+                                </time>
+                            </p>
+                            <p class="col-sm-12 col-xs-12">活动现场相当火爆，详见照片</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <img src="./images/u1763.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal">返回预览</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Modal 装修跟踪 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-decoration">
+        <a href="#">装修跟踪 </a>
+    </div>
+    <div class="modal fade" id="add-decoration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-decoration" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">装修跟踪—xxxx经销商 <span>1号店</span></h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label class="control-label">方案名称：</label>
+                            <span>315公司营销方案</span>
+                        </div>
+                        <div class="col-sm-4 no-padding">
+                            <label class="control-label">方案名称：</label>
+                            <span><time>2016-6-30</time>发布人：李四</span>
+                        </div>
+                        <div class="col-sm-4 no-padding">
+                            <label class="control-label">执行时间：</label>
+                            <span><time>2016-11-1</time>至<time>2016-11-15</time></span>
+                        </div>
+                    </div>
+                    <div class="form-group no-border">
+                        <div class="sui-steps steps-auto">
+                            <div class="wrap">
+                                <div class="finished">
+                                    <label>
+                                        <span class="round">
+                                            <i class="sui-icon icon-pc-right"></i>
+                                        </span>
+                                        <span>平面图</span>
+                                    </label>
+                                    <i class="triangle-right-bg"></i>
+                                    <i class="triangle-right"></i>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="finished">
+                                    <label>
+                                        <span class="round">
+                                            <i class="sui-icon icon-pc-right"></i>
+                                        </span>
+                                        <span>样品图</span>
+                                    </label>
+                                    <i class="triangle-right-bg"></i>
+                                    <i class="triangle-right"></i>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="current">
+                                    <label>
+                                        <span class="round">2</span>
+                                        <span>施工图</span>
+                                    </label>
+                                    <i class="triangle-right-bg"></i>
+                                    <i class="triangle-right"></i>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="todo">
+                                    <label>
+                                        <span class="round">4</span>
+                                        <span>施工</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <ul class="col-sm-4">
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    发起流程
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交平面图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    确认平面图
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-4">
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交样品图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-left"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    修改平面图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-left"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    确认样品图
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-4">
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交施工图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    修改样品图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-left"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交施工图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    修改样品图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <i class="fa fa-hand-o-left"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交工程图
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-4">                
+                            <li>
+                                <i class="fa fa-hand-o-right"></i>
+                                <span>
+                                    <time>2016-6-1</time>
+                                    <span>李四</span>
+                                    提交平面图
+                                </span>
+                                <img class="col-xs-4" src="./images/u1763.png">
+                            </li>
+                            <li>
+                                <button class="btn btn-default">提交反馈</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal">关闭预览</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+       <!-- Modal巡店跟踪 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-patrol-result">
+        <a href="#">巡店跟踪</a>
+    </div>
+    <div class="modal fade" id="add-patrol-result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-patrol-result" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">巡店跟踪 —张力 —xxxx经销商 <span>1号店</span> </h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-5 col-sm-5">
+                        <ul>
+                            <li>                                <label>门店：</label>
+                                <span>xxx经销商 1 号门店</span>
+                            </li>                            <li>                                <label>选点地址：</label>
+                                <span>xxx市xxx路xx号</span>
+                                <a href="#"><i class="fa fa-map-marker"></i></a>
+                            </li>                            <li>                                <label>巡店时间：</label>
+                                <time>2016-6-1 12：30</time>
+                            </li>                            <li>                                <label>工作内容：</label>
+                                <span>活动汇报-双11公司营销方案 日常巡店</span>
+                            </li>                        </ul>
+                        <article>
+                           巡店工作汇报：
+                           <p>
+                              巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今
+                           </p>
+                           <p>
+                              巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今日之事今日毕巡店工作汇报今
+                           </p>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-7 col-sm-7">
+                        <div class="form-group no-border">
+                            <a href="#" class="col-sm-6" data-toggle="modal" data-target="#picture-show">
+                                <img src="./images/u1763.png">
+                            </a>
+                            <a href="#" class="col-sm-6" data-toggle="modal" data-target="#picture-show">
+                                <img src="./images/u1763.png">
+                            </a>
+                        </div>
+                        
+                        <div class="form-group">
+                            <a href="#" class="col-sm-6" data-toggle="modal" data-target="#picture-show">
+                                <img src="./images/u1763.png">
+                            </a>
+                            <a href="#" class="col-sm-6" data-toggle="modal" data-target="#picture-show">
+                                <img src="./images/u1763.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal">关闭预览</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+<!-- Modal巡店跟踪图片点开后图片展示 action -->
+     <div class="modal fade" id="picture-show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-picture-show" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">巡店跟踪 —张力 —xxxx经销商 <span>1号店</span> </h4>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+
+    <!--easy pie chart-->
+    <script src="js/easypiechart/jquery.easypiechart.js"></script>
+    <script src="js/easypiechart/easypiechart-init.js"></script>
+
+    <!--Sparkline Chart-->
+    <script src="js/sparkline/jquery.sparkline.js"></script>
+    <script src="js/sparkline/sparkline-init.js"></script>
+
+    <!--icheck -->
+    <script src="js/iCheck/jquery.icheck.js"></script>
+    <script src="js/icheck-init.js"></script>
+
+    <!-- jQuery Flot Chart-->
+    <script src="js/flot-chart/jquery.flot.js"></script>
+    <script src="js/flot-chart/jquery.flot.tooltip.js"></script>
+    <script src="js/flot-chart/jquery.flot.resize.js"></script>
+
+
+    <!--Morris Chart-->
+    <script src="js/morris-chart/morris.js"></script>
+    <script src="js/morris-chart/raphael-min.js"></script>
+
+    <!--Calendar-->
+    <script src="js/calendar/clndr.js"></script>
+    <script src="js/calendar/evnt.calendar.init.js"></script>
+    <script src="js/calendar/moment-2.2.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+    <!--common scripts for all pages-->
+    <script src="js/scripts.js"></script>
+
+    <!--Dashboard Charts-->
+    <script src="js/dashboard-chart-init.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+
+
+    <!--pickers plugins-->
+    <script type="text/javascript" src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+    <!--pickers initialization-->
+    <script src="js/pickers-init.js"></script>
+
+</html>

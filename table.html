@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>飞宇信息化系统</title>
+
+  <!--icheck-->
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-colorpicker/css/colorpicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/css/datetimepicker-custom.css" />
+
+  <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+  <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+  <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/modal.css"/>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <header>
+        <!--logo and iconic logo start-->
+        <div class="logo hidden-xs">
+            <a href="index.html"><img width="200px" src="images/05.jpg" alt=""></a>
+        </div>
+        <!-- <div class="logo-icon text-center">
+            <a href="index.html"><img src="images/logo_icon.jpg" alt=""></a>
+        </div> -->
+        <!--logo and iconic logo end-->
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+
+            <div class="pull-left hidden-md hidden-sm hidden-xs"> <span class="header-special">飞宇门窗营销管理平台</span>欢迎您 , garyZhang !  </div>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <ul class="notification-menu">
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="发送消息" >
+                        <i class="fa fa-comment"></i>
+                         <div>发送消息</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增订单"  >
+                        <i class="fa fa-copy"></i>
+                         <div>新增订单</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增经销商"  >
+                        <i class="fa fa-group"></i>
+                         <div>新增经销商</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增方案"  >
+                        <i class="fa fa-pencil"></i>
+                         <div>新增方案</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增案例"  >
+                        <i class="fa fa-file-text"></i>
+                         <div>新增案例</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="巡店安排"  >
+                        <i class="fa fa-eye"></i>
+                         <div>巡店安排</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="日常汇报"  >
+                        <i class="fa fa-calendar"></i>
+                         <div>日常汇报</div>
+                    </a>
+
+                </li>
+            </ul>
+            <section class="menu-right">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/photos/user-avatar.png" alt="" />
+                    Gary zhang
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                    <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i>  编辑信息</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>退出</a></li>
+                </ul>
+            </section>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+    </header>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">Gary zhang</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+                <h5 class="left-nav-title">帐号信息</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>个人信息</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>编辑信息</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>退出</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active">
+                   <a href="index.html">
+                      <i class="fa fa-home"></i>
+                      <span>工作台</span>
+                   </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>订单管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-gift"></i>
+                        <span>营销管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-building-o"></i>
+                        <span>市场管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-file-text"></i>
+                        <span>案例管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-users"></i>
+                        <span>经销商管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-user"></i>
+                        <span>客户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span>统计分析</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-volume-up"></i>
+                        <span>公告管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-gear"></i>
+                        <span>系统配置</span>
+                    </a>
+                </li>
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+
+    <!-- page heading start-->
+    <div class="page-heading">
+        <ul class="breadcrumb panel">
+            <li><a href="#"><i class="fa fa-home"></i> 工作台</a></li>
+            <li><a href="#">信息管理</a></li>
+            <li class="active">营销管理</li>
+        </ul>
+    </div>
+    <!-- page heading end-->
+
+
+    <!-- main content start-->
+    <div class="main-content" >
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div class="panel-heading">
+                       营销方案列表
+                       <form class="form-inline" role="form" style="margin-top: 10px;">
+                           <div class="row">
+                               <div class="col-md-11">
+                                   <div class="col-md-6">
+                                      <input type="email" class=" form-control"  placeholder="请输入方案编号\名称" />
+                                      <select class="form-control">
+                                           <option>选择类型</option>
+                                           <option>门类</option>
+                                           <option>窗类</option>
+                                        </select>
+                                        <select class="form-control">
+                                             <option>选择状态</option>
+                                             <option>执行中</option>
+                                             <option>待执行</option>
+                                         </select>
+                                   </div>
+                                   <div class="col-md-6">
+                                    <label class="control-label col-md-3" style="margin-top: 5px;">创建时间</label>
+                                    <div class="col-md-9 input-group input-large custom-date-range" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                                        <input type="text" class="form-control dpd1" name="from" placeholder="开始时间">
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control dpd2" name="to"  placeholder="结束时间">
+                                    </div>
+                                </div>
+                               </div>
+                               <div class="col-md-1">
+                                     <button class="btn btn-primary">查询</button>
+                            </div>
+                           </div>
+                                <!--<div class="form-group">
+                                    <label class="col-lg-2 col-sm-2 control-label" for="exampleInputEmail2">Email address</label>
+                                    <input type="email" class="col-lg-10" id="exampleInputEmail2" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                </div>
+                            -->
+                        </form>
+                     </div>
+                     <div class="panel-body">
+                        <table class="table  table-hover general-table">
+                            <thead>
+                                <tr>
+                                <th>方案编号</th>
+                                <th>方案名称</th>
+                                <th>发布时间</th>
+                                <th>状态</th>
+                                <th>执行时间</th>
+                                <th>参与门店</th>
+                                <th>点赞率</th>
+                                <th>评论数</th>
+                                <th>汇报数</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2016001</td>
+                                    <td> <a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-info label-mini">执行完成</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                        <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>2016001</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-warning label-mini">执&nbsp;&nbsp;行&nbsp;&nbsp;中</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                        <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2016001</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-success label-mini">执行完成</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                        <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2016001</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-success label-mini">执行完成</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                         <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2016001</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-info label-mini">执&nbsp;&nbsp;行&nbsp;&nbsp;中</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                         <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2016001</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#myModal">315促销方案</a></td>
+                                    <td class="center">2016-3-10</td>
+                                    <td class="center "><span class="label label-info label-mini">执&nbsp;&nbsp;行&nbsp;&nbsp;中</span></td>
+                                    <td class="center ">2016-3-10至2016-3-16</td>
+                                    <td class="center ">123</td>
+                                    <td class="center ">90%</td>
+                                    <td class="center ">56</td>
+                                    <td class="center ">34</td>
+                                    <td >
+                                        <a href="#" class="btn btn-sm btn-info">编辑</a>
+                                         <a href="#" class="btn btn-sm btn-warning">删除</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                  </section>
+              <div class="row">
+                  <ul class="pagination pull-right" style="padding-right: 20px;">
+                      <li><a href="#">«</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li class="active"><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">»</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!--body wrapper end-->
+
+      <footer>
+          2016 &copy; 成都盈客网络科技有限公司
+      </footer>
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">添加员工</h4>
+        </div>
+
+        <form action="<?php echo U('Yggl/add');?>" method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label col-md-2">姓名:</label>
+                    <div class="col-md-4">
+                        <input name="name" class="form-control" placeholder="李四" type="text">
+                    </div>
+                    <label class="control-label col-md-2">性别:</label>
+                    <div class="col-md-4 input-box-radio">
+                        <input  type="radio"  value="1"  name="sex">先生
+                        &nbsp;&nbsp;
+                        <input type="radio"  value="0"  name="sex">女士
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">电话:</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="phone" placeholder="1333333333" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">住址:</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="address"  placeholder="xx区xx街道xx号" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">所属门店:</label>
+                    <div class="col-md-4">
+                        <select class="form-control" name="store_id">
+                            <option value="">全部</option>
+                            <?php  foreach($store as $s){ ?>
+                            <option value="<?php echo $s['id'];?>"><?php echo $s['name'];?></option>
+                            <?php }?>
+
+                        <lect>
+                    </div>
+                    <label class="control-label col-md-2">岗位:</label>
+                    <div class="col-md-4">
+
+
+                        <select class="form-control" name="position_id">
+                            <option value="">全部</option>
+                            <?php  foreach($store_position as $p){?>
+                            <option value="<?php echo $p['id'];?>"><?php echo $p['name'];?></option>
+                            <?php } ?>
+                        <lect>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">入职时间:</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"  value="{$store_member.create_time}"  type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭<tton>
+                <button type="button" class="btn btn-primary"  onclick="ajaxAdd(this)">保存<tton>
+            </div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><i class="fa fa-user"></i>
+                            王先生
+                        </td>
+                        <td>
+                            <p>13333333333</p>
+                            <p>2016年6月15日到店</p>
+                        </td>
+                        <td>已下单
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-user"></i>
+                            王先生
+                        </td>
+                        <td>
+                            <p>13333333333</p>
+                            <p>2016年6月15日到店</p>
+                        </td>
+                        <td>已下单
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-user"></i>
+                            王先生
+                        </td>
+                        <td>
+                            <p>13333333333</p>
+                            <p>2016年6月15日到店</p>
+                        </td>
+                        <td>已下单
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <section class="panel">
+                <div class="panel-heading">
+                  客户跟踪记录
+                </div>
+                <ul class="panel-body">
+                    <li>
+                        <span>2016-6-15</span>
+                        <span>12:30</span>
+                        <span>咨询中</span>
+                        <span>由【张力登记】</span>
+                    </li>
+                    <li>
+                        <span>2016-6-15</span>
+                        <span>12:30</span>
+                        <span>设计图</span>
+                        <span>由【张力登记】</span>
+                    </li>
+                    <li>
+                        <span>2016-6-15</span>
+                        <span>12:30</span>
+                        <span>询价</span>
+                        <span>由【张力登记】</span>
+                    </li>
+                    <li>
+                        <span>2016-6-15</span>
+                        <span>12:30</span>
+                        <span>跟踪 客户意愿很大</span>
+                        <span>由【张力登记】</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="panel">
+                <div class="panel-heading">
+                  <span>20160620002</span>
+                  <span>窗类订单</span>
+                  <span class="pull-right">2016-6-20 12:30</span>
+                </div>
+                <ul class="panel-body">
+                    <li>
+                        <h1>1</h1>
+                        <section class="information">
+                            锋景102 外平开窗  南美红檀香  无格条
+                            外玻内纱　正面加三房门套线    楼层：1
+                            樘数：1  展厅  地台：250   无转角
+                            <p>备注：尺寸含半圆柱</p>
+                        </section>
+                        <section class="edit">
+                            <span>3200</br>x2130</span>
+                            <a href="#">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <h1>2</h1>
+                        <section class="information">
+                            锋景102 外平开窗  南美红檀香  无格条
+                            外玻内纱　正面加三房门套线    楼层：1
+                            樘数：1  展厅  地台：250   无转角
+                            <p>备注：尺寸含半圆柱</p>
+                        </section>
+                        <section class="edit">
+                            <span>3200</br>x2130</span>
+                            <a href="#">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </a>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+        </form>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="js/dynamic_table_init.js"></script>
+
+<!--pickers plugins-->
+<script type="text/javascript" src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+<!--pickers initialization-->
+<script src="js/pickers-init.js"></script>
+
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+</body>
+</html>

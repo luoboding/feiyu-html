@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>飞宇信息化系统</title>
+
+  <!--icheck-->
+  <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
+  <link href="js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="js/iCheck/skins/square/square.css" rel="stylesheet">
+  <link href="js/iCheck/skins/square/red.css" rel="stylesheet">
+  <link href="js/iCheck/skins/square/blue.css" rel="stylesheet">
+
+  <!--dashboard calendar-->
+  <link href="css/clndr.css" rel="stylesheet">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '最近7天销量'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: [{
+            categories: ['7-10', '7-11', '7-12', '7-13', '7-14', '7-15',
+                '7-16'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '到店',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '下单',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} ',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '下单',
+            type: 'column',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+            tooltip: {
+                valueSuffix: ' 人'
+            }
+
+        }, {
+            name: '到店',
+            type: 'spline',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2],
+            tooltip: {
+                valueSuffix: '个'
+            }
+        }]
+    });
+    $('#container2').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '门窗关注度TOP5'
+        },
+        xAxis: {
+            categories: ['门类1', '门类2', '门类3', '门类4', '门类5']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '关注度总数量'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '到店记录',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: '案例访问',
+            data: [2, 2, 3, 2, 1]
+        }]
+    });
+});
+
+		</script>
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+    <header>
+        <!--logo and iconic logo start-->
+        <div class="logo hidden-xs">
+            <a href="index.html"><img width="200px" src="./images/05_03.jpg" alt=""></a>
+        </div>
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn menu-collapsed"><i class="fa fa-bars"></i></a>
+
+            <div class="pull-left hidden-md hidden-sm hidden-xs">
+                <span class="header-special">飞宇门窗营销管理平台</span>欢迎您 , garyZhang !
+            </div>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <ul class="notification-menu">
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="发送消息" >
+                        <i class="fa fa-comment"></i>
+                         <div>发送消息</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增订单"  >
+                        <i class="fa fa-copy"></i>
+                         <div>新增订单</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增经销商"  >
+                        <i class="fa fa-group"></i>
+                         <div>新增经销商</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增方案"  >
+                        <i class="fa fa-pencil"></i>
+                         <div>新增方案</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增案例"  >
+                        <i class="fa fa-file-text"></i>
+                         <div>新增案例</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="巡店安排"  >
+                        <i class="fa fa-eye"></i>
+                         <div>巡店安排</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="日常汇报"  >
+                        <i class="fa fa-calendar"></i>
+                         <div>日常汇报</div>
+                    </a>
+
+                </li>
+            </ul>
+            <section class="menu-right">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/photos/user-avatar.png" alt="" />
+                    Gary zhang
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                    <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i>  编辑信息</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>退出</a></li>
+                </ul>
+            </section>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+    </header>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">Gary zhang</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">帐号信息</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>个人信息</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>编辑信息</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>退出</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>工作台</span></a></li>
+
+                <li>
+                            <a href="index.html">
+                                <i class="fa fa-files-o"></i>
+                                <span>订单管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-gift"></i>
+                                <span>营销管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-building-o"></i>
+                                <span>市场管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-file-text"></i>
+                                <span>案例管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-users"></i>
+                                <span>经销商管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-user"></i>
+                                <span>客户管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>统计分析</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-volume-up"></i>
+                                <span>公告管理</span>
+                            </a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="index.html">
+                                <i class="fa fa-gear"></i>
+                                <span>系统配置</span>
+                            </a>
+                            <ul class="sub-menu-list">
+                              <li><a href="profile.html"> 角色</a></li>
+                              <li><a href="invoice.html"> 系统运行配置</a></li>
+                              <li><a href="pricing_table.html"> 系统日志查询</a></li>
+                              <li><a href="timeline.html"> 微信公众号关联配置</a></li>
+                          </ul>
+                        </li>
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    <!-- page heading start-->
+    <div class="page-heading">
+        <!-- <h3>
+            工作台
+        </h3> -->
+        <ul class="breadcrumb panel">
+                <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+                <li class="active"><a href="#">工作台</a></li>
+        </ul>
+
+    </div>
+    <!-- page heading end-->
+
+    <!-- main content start-->
+    <div class="main-content" >
+        <!--body wrapper start-->
+        <div class="wrapper index-wrapper">
+            <!-- <section class="col-md-12"> -->
+              <div class="col-md-6">
+                  <div class="panel panel-datas ">
+                  <!--statistics start-->
+                  <div class="row state-overview">
+                      <div class="col-md-6 col-xs-12 col-sm-6">
+                          <div class="panel purple">
+                              <div class="symbol">
+                                  <i class="fa fa-files-o"></i>
+                              </div>
+                              <div class="state-value">
+                                  <div class="value">230</div>
+                                  <div class="title">订单总数</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-xs-12 col-sm-6">
+                          <div class="panel red">
+                              <div class="symbol">
+                                  <i class="fa fa-money"></i>
+                              </div>
+                              <div class="state-value">
+                                  <div class="value">3490</div>
+                                  <div class="title">订单金额</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row state-overview">
+                      <div class="col-md-6 col-xs-12 col-sm-6">
+                          <div class="panel blue">
+                              <div class="symbol">
+                                  <i class="fa fa-sitemap"></i>
+                              </div>
+                              <div class="state-value">
+                                  <div class="value">22014</div>
+                                  <div class="title"> 门店数</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-xs-12 col-sm-6">
+                          <div class="panel green">
+                              <div class="symbol">
+                                  <i class="fa fa-legal"></i>
+                              </div>
+                              <div class="state-value">
+                                  <div class="value">390</div>
+                                  <div class="title"> 新增门店数</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--statistics end-->
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel summary-box">
+                     <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-7 col-xs-7">
+                                <div id="graph-donut" class="revenue-graph"><svg height="220" version="1.1" width="264" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#4acacb" d="M132,176.66666666666669A66.66666666666667,66.66666666666667,0,0,0,173.57879551323234,57.88811835950217" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#4acacb" stroke="none" d="M132,179.66666666666669A69.66666666666667,69.66666666666667,0,0,0,175.44984131132782,55.54308368567977L194.36819326984852,31.832177539253266A100,100,0,0,1,132,210Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#6a8bc0" d="M173.57879551323234,57.88811835950217A66.66666666666667,66.66666666666667,0,0,0,69.95101113025744,85.6203481426209" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#6a8bc0" stroke="none" d="M175.44984131132782,55.54308368567977A69.66666666666667,69.66666666666667,0,0,0,67.15880663111902,84.52326380903884L43.58019086061685,75.25899610323478A95,95,0,0,1,191.2497836063561,35.7405686622906Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#5ab6df" d="M69.95101113025744,85.6203481426209A66.66666666666667,66.66666666666667,0,0,0,90.41301928453285,162.10534981569367" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#5ab6df" stroke="none" d="M67.15880663111902,84.52326380903884A69.66666666666667,69.66666666666667,0,0,0,88.54160515233681,164.45009055739988L72.7385524804593,184.25012348736345A95,95,0,0,1,43.58019086061685,75.25899610323478Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#fe8676" d="M90.41301928453285,162.10534981569367A66.66666666666667,66.66666666666667,0,0,0,131.97905604932066,176.66666337679857" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#fe8676" stroke="none" d="M88.54160515233681,164.45009055739988A69.66666666666667,69.66666666666667,0,0,0,131.9781135715401,179.6666632287545L131.97015487028193,204.99999531193794A95,95,0,0,1,72.7385524804593,184.25012348736345Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="132" y="100" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" font-weight="800" transform="matrix(1.8071,0,0,1.8071,-106.5192,-87.5659)" stroke-width="0.5533854166666666"><tspan dy="5.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">New Visit</tspan></text><text x="132" y="120" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" transform="matrix(1.3889,0,0,1.3889,-51.3303,-43.5556)" stroke-width="0.7199999999999999"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">at least 70%</tspan></text></svg></div>
+
+                            </div>
+                            <div class="col-md-5 col-sm-5 col-xs-5">
+                                <ul class="bar-legend">
+                                    <li><span class="blue"></span> 门类 xxx75</li>
+                                    <li><span class="green"></span> 窗类 xxx89</li>
+                                    <li><span class="purple"></span> 门类 xxx09</li>
+                                    <li><span class="red"></span> 门类 xxx345</li>
+                                </ul>
+                            </div>
+                        </div>
+                     </div>
+              </div>
+             </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-body">
+                       <div id="container" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                   <div class="panel-body">
+                        <div id="container2" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
+                   </div>
+              </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-heading">
+                       新店装修
+                       <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body">
+                      <div class="panel-heading panel-title">
+                          XXXX经销商  1门店装修跟踪
+                          <span class="pull-right">施工阶段 2016-11-11至2016-12-01</span>
+                      </div>
+                       <div class="sui-steps steps-auto">
+                            <div class="wrap">
+                                <div class="finished">
+                                  <label><span class="round"><i class="sui-icon icon-pc-right"></i></span><span>平面图</span></label><i class="triangle-right-bg"></i><i class="triangle-right"></i>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="current">
+                                  <label><span class="round">2</span><span>样品图</span></label><i class="triangle-right-bg"></i><i class="triangle-right"></i>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="todo">
+                                   <label><span class="round">3</span><span>施工图</span></label>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="todo">
+                                   <label><span class="round">4</span><span>施工</span></label>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel massage">
+                  <div class="panel-heading">消息通知
+                      <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body">
+                      <div class="panel-heading panel-title">
+                          <i class="fa fa-volume-up"></i> 关于某某某会议的通知 <span class="pull-right" style="margin-right: 50px;"> 2015-08-09 12:00:00</span>
+                      </div>
+                      <div class="panel-body massage-content">
+                         <span class="panel-text-massage">原定于明天与公司大会议室开会讨论,会议主题 ,原定于明天与公司大会议室开会讨论,会议主题......</span>
+                      </div>
+                  </div>
+
+              </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-heading">
+                      <i class="fa fa-circle text-primary mg-r-xs"></i>方案跟踪
+                      <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body extra-pad">
+                      <ul class="list-group">
+                          <li class="list-group-item">
+                              <div class="panel-heading panel-title">
+                                  315公司营销方案
+                                  <span class="pull-right">执行中 2016-11-11至2016-12-01</span>
+                              </div>
+                              <div  class="row">
+                                  <div class="col-md-3">
+                                      <div class="panel panel-danger pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                              <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">235</span>
+                                              <p style="    margin: 0 0 0px;">门店数</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <div class="panel panel-success pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                              <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">61%</span>
+                                              <p style="margin: 0 0 0px;">点赞</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                       <div class="panel panel-primary pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                              <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">80</span>
+                                              <p style="    margin: 0 0 0px;">评论</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                       <div class="panel panel-info pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                              <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">150</span>
+                                              <p style="    margin: 0 0 0px;">汇报</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item">
+                              <div class="panel-heading panel-title">
+                                   315公司营销方案
+                                   <span class="pull-right">执行中 2016-11-11至2016-12-01</span>
+                              </div>
+                              <div  class="row">
+                                  <div class="col-md-3">
+                                      <div class="panel panel-warning pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                              <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">235</span>
+                                              <p style="    margin: 0 0 0px;">门店数</p>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                   <div class="col-md-3">
+                                       <div class="panel panel-success pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                          <div class="plan-price text-center" style="margin: 0 0;">
+                                                                    <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">61%</span>
+                                              <p style="margin: 0 0 0px;">点赞</p>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="col-md-3">
+                                       <div class="panel panel-primary pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                            <div class="plan-price text-center" style="margin: 0 0;">
+                                                <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">80</span>
+                                                <p style="    margin: 0 0 0px;">评论</p>
+                                            </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="col-md-3">
+                                       <div class="panel panel-info pricing-table-2" style="border:0px; margin-bottom: 0px;">
+                                            <div class="plan-price text-center" style="margin: 0 0;">
+                                                <span style="height:40px; width:40px; line-height:40px; font-size: 20px;margin: 10px 0px 0px 0px;">150</span>
+                                                <p style="    margin: 0 0 0px;">汇报</p>
+                                            </div>
+                                      </div>
+
+                                  </div>
+
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-heading">
+                      <i class="fa fa-circle text-primary mg-r-xs"></i>订单信息
+                      <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body extra-pad">
+                       <ul class="goal-progress">
+                          <li>
+                              <div class="details">
+                                  <p>
+                                       <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                       <span class="small order-status"> 20160630001   待付款 </span>
+                                      <span class="small pull-right">2016-6-30 15:30</span>
+                                  </p>
+                                  <div class="small">
+                                      王先生- 13349865411
+                                      <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                  </div>
+                                  <div class="small">
+                                      成都市武侯区吉泰路XXXX花园1-1-12-1
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+
+                              <div class="details">
+                                  <p>
+                                       <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                       <span class="small order-status"> 20160630001   待付款 </span>
+                                      <span class="small pull-right">2016-6-30 15:30</span>
+
+                                  </p>
+                                  <div class="small">
+                                      王先生- 13349865411
+                                      <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                  </div>
+                                  <div class="small">
+                                      成都市武侯区吉泰路XXXX花园1-1-12-1
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+
+                              <div class="details">
+                                  <p>
+                                       <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                       <span class="small order-status"> 20160630001   待付款 </span>
+                                      <span class="small pull-right">2016-6-30 15:30</span>
+
+                                  </p>
+                                  <div class="small">
+                                      王先生- 13349865411
+                                      <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                  </div>
+                                  <div class="small">
+                                      成都市武侯区吉泰路XXXX花园1-1-12-1
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-heading">
+                      案例分享
+                       <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body">
+                      <ul class="goal-progress">
+                          <li>
+                              <div class="details">
+                                  <div class="title">
+                                      <a href="#">成都飞宇经销商</a> - 分享 关于产品 XXXX98
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div class="title">
+                                      <a href="#">成都飞宇经销商</a> - 分享 关于产品 XXXX98
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div class="title">
+                                      <a href="#">成都飞宇经销商</a> - 分享 关于产品 XXXX98
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                  <div class="panel-heading">
+                      巡店跟踪
+                        <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                  </div>
+                  <div class="panel-body">
+                       <ul class="goal-progress">
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                  <small>
+                                      <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                      参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                  </small>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+
+                              <div class="details">
+                                    <div>张力
+                                          <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                          <span class="pull-right"> 2016-11-11</span>
+                                      </div>
+                                      <small>XXXX经销商   1门店</small>
+                                      <div>
+                                            <small>
+                                              <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                              参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                      </small>
+                                      </div>
+                              </div>
+                          </li>
+                       </ul>
+                  </div>
+              </div>
+              </div>
+            <!-- </section> -->
+            <!--<section class="col-md-6"> -->
+
+
+
+
+
+            <!-- </section> -->
+        </div>
+        <!--body wrapper end-->
+
+        <footer>
+            2016 &copy; 成都盈客网络科技有限公司
+        </footer>
+    </div>
+    <!-- main content end-->
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--easy pie chart-->
+<script src="js/easypiechart/jquery.easypiechart.js"></script>
+<script src="js/easypiechart/easypiechart-init.js"></script>
+
+<!--Sparkline Chart-->
+<script src="js/sparkline/jquery.sparkline.js"></script>
+<script src="js/sparkline/sparkline-init.js"></script>
+
+<!--icheck -->
+<script src="js/iCheck/jquery.icheck.js"></script>
+<script src="js/icheck-init.js"></script>
+
+<!-- jQuery Flot Chart-->
+<script src="js/flot-chart/jquery.flot.js"></script>
+<script src="js/flot-chart/jquery.flot.tooltip.js"></script>
+<script src="js/flot-chart/jquery.flot.resize.js"></script>
+
+
+<!--Morris Chart-->
+<script src="js/morris-chart/morris.js"></script>
+<script src="js/morris-chart/raphael-min.js"></script>
+
+<!--Calendar-->
+<script src="js/calendar/clndr.js"></script>
+<script src="js/calendar/evnt.calendar.init.js"></script>
+<script src="js/calendar/moment-2.2.1.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+
+<!--Dashboard Charts-->
+<script src="js/dashboard-chart-init.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+</body>
+</html>

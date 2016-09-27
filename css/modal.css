@@ -1,0 +1,358 @@
+.modal-box{
+	 margin: 30px;
+}
+
+form{
+	padding-bottom: 10px;
+}
+/*.form-gtoup{
+	display: flex;
+	align-items: center;
+}*/
+.form-horizontal .control-label{
+	padding-top: 0;
+}
+.modal .table thead > tr > th,
+.modal .table tbody > tr > th,
+.modal .table tfoot > tr > th,
+.modal .table thead > tr > td,
+.modal .table tbody > tr > td,
+.modal table tfoot > tr > td{
+	padding:10px 30px;
+	vertical-align: middle;
+}
+.modal .table i.fa-user{
+	font-size: 18px;
+}
+.modal .table p{
+	margin: 0;
+}
+.modal .table tr td:last-child{
+	text-align: right;
+	padding-right: 20px;
+}
+.modal .table tr td .fa-angle-right{
+	font-size: 16px;
+}
+.modal .panel-heading{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.modal .panel-body{
+	padding-left: 30px;
+}
+.modal li{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+}
+.modal li .information{
+	width: 80%;
+    padding: 0 30px;
+}
+.modal li .edit{
+	display: flex;
+	align-items: center;
+	text-align: right;
+}
+.modal li .edit i{
+	padding-left: 25px;
+}
+textarea{
+		margin: 0 15px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+}
+.btn-file{
+	margin-left: 15px;
+	padding: 5px 25px;
+}
+
+
+.modal-Order{
+	  width: 850px;
+}
+.col-padding-box{
+	 padding:0 5px;
+}
+
+.modal-Dealer{
+	  width: 900px;
+}
+.dpMonths{
+	position: relative;
+}
+.dpMonths .input-group-btn{
+	position: absolute;
+	right: 30px;
+}
+
+
+thead{
+  	border-bottom: 1px solid #eff2f7;
+}
+td, th{
+  	padding: 8px 0;
+}
+.modal-Dealer-store,
+#add-Plan-preview-modal .modal-Plan-preview{
+		border: 1px solid #efefef;
+		box-shadow: 0 5px 30px rgba(0,0,0,.6);
+		top:120px;
+}
+.modal-Dealer-store{
+	width: 790px;
+}
+.padding-box{
+	  padding: 0 10px;
+}
+.modal-plan,
+.modal-case,
+.modal-patrol,
+.modal-report,
+.modal-Plan-preview
+{
+  	width: 760px;
+}
+.upload-img-box{
+  	padding: 25px 0;
+}
+.upload-img,
+.btn-upload-img{
+  	width: 76px;
+  	height: 80px;
+}
+.btn-upload-img{
+	padding-top: 28px;
+}
+.upload-img{
+	padding: 0;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+.upload-img img{
+	min-width: 100%;
+}
+.modal .menu-list{
+	position: relative;
+}
+.modal .menu-list>.btn{
+	margin-left:10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.modal .sub-menu-list{
+	position: absolute;
+	left: 88px;
+	top: 38px;
+}
+.modal .sub-menu-list li{
+	width: 85px;
+}
+.modal .table-box{
+	padding:0 0 0 10px;
+}
+.modal .table-box table{
+	margin-bottom:10px;
+	width: 100%;
+}
+.modal td, .modal th{
+	padding: 0;
+	line-height: 30px;
+}
+
+#add-plan .form-group,
+#add-case .form-group,
+#add-patrol .form-group,
+#add-report .form-group,
+#share-case .form-group,
+#add-Plan-preview .form-group{
+	border-bottom: 0;
+}
+#add-case .form-group{
+	margin-bottom: 0;
+}
+#add-case .col-ms-10{
+	padding-right: 0;
+}
+
+#add-case textarea{
+ 	margin-right: 0px;
+}
+#add-case .upload-img,
+#add-case .btn-upload-img,
+#add-report .upload-img,
+#add-report .btn-upload-img{
+	width: 106px;
+	height: 107px;
+}
+#add-case .btn-upload-img,
+#add-report .btn-upload-img{
+	padding-top: 28px;
+	font-size: 28px;
+}
+.modal .plan-box{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.modal .plan-box a{
+	display: block;
+	padding:2px 10px;
+	color: #333;
+}
+
+.modal .modal-title{
+	display: flex;
+	align-items: center;
+}
+.modal .modal-title small{
+	color: #fff;
+	flex: 1;
+	text-align: right;
+	padding-right: 15px;
+}
+.modal .modal-title small time{
+	padding-left:15px;
+}
+.modal-massage .control-label{
+	 text-align: left;
+}
+.modal .btn-primary a{
+	color: #fff;
+}
+.modal input[type=radio],.modal input[type=checkbox]{
+	margin: 0;
+}
+
+
+#add-Plan-preview .carousel{
+	height: 328px;
+	overflow: hidden;
+}
+#add-Plan-preview .glyphicon{
+	top: 154px;
+	color: #fff;
+}
+#add-Plan-preview .carousel-indicators{
+	margin-left: -22px;
+}
+#add-Plan-preview .carousel-indicators li{
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+#add-Plan-preview .carousel-indicators .active{
+	background-color: #fff;
+}
+#add-Plan-preview textarea{
+	margin-top: 15px;
+}
+#add-Plan-preview .fa{
+	line-height: 20px;
+}
+.directory-info-row .social-links li{
+    display: inline-block;
+    margin: 0 10px;
+}
+#add-Plan-preview-modal .modal-Plan-preview{
+	width: 638px;
+}
+#add-Plan-preview-modal .fa-user{
+ 	font-size: 22px;
+ 	color: #333;
+}
+#add-Plan-preview-modal .form-group span{
+	padding-left: 10px;
+}
+#add-Plan-preview-modal time{
+	padding-left: 10px;
+}
+.btn-primary a:focus,
+.btn-primary a:active, 
+.btn-primary a:hover{
+	text-decoration: none;
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary{
+	background-color: #f8c400;
+    border-color: #f8c400;
+}
+.btn-primary a{
+	color: #fff;
+}
+#add-Plan-preview-modal .text-box{
+	flex-wrap: wrap;
+}
+#add-Plan-preview-modal .text-box p{
+	margin: 0;
+	line-height: 24px;
+}
+.user-box{
+	font-size: 20px;
+}
+
+.modal-decoration,
+.modal-patrol-result,
+.modal-picture-show{
+	width: 850px;
+}
+.modal .sui-steps{
+	padding: 0 15px;
+}
+.fa-hand-o-right,
+.fa-hand-o-left{
+    margin-right: 5px;
+    font-size: 16px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 50%;
+}
+.fa-hand-o-right{
+    background-color:#cfcfcf;
+}
+.fa-hand-o-left{
+
+    background-color: #f8c400;
+}
+.modal-decoration li{
+	padding: 10px 0;
+}
+.modal-decoration li .btn-default{
+    width: 100%;
+    margin-top: 12px;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+}
+.modal-decoration li .btn-default:hover{
+	color: #fff;
+    background-color: #999;
+    border-color: #999;
+}
+.form-horizontal.adminex-form .form-group.no-border{
+	border-bottom: 0;
+}
+.modal-decoration .form-group.no-border{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.modal-patrol-result .fa-map-marker{
+	color: #f8c400;
+	font-size: 20px;
+}
+.modal-patrol-result li{
+	font-size: 16px;
+}
+.modal-patrol-result article{
+	margin-top:60px;
+}
+.modal-patrol-result article p{
+	text-indent: 28px;
+	margin:5px 0;
+}
