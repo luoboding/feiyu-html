@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>飞宇信息化系统</title>
+
+  <!--icheck-->
+  <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
+  <link href="js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="js/iCheck/skins/square/square.css" rel="stylesheet">
+
+  <!--pickers css-->
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-colorpicker/css/colorpicker.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/css/datetimepicker-custom.css" />
+
+  <!--dashboard calendar-->
+  <link rel="stylesheet" href="css/clndr.css">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="./css/fileinput.css">
+  <link rel="stylesheet" href="css/modal.css">
+
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+<body class="login-body">
+	<div class="container">
+	    <form class="form-signin" action="index.html">
+	        <div class="form-signin-heading text-center">
+	            <h1 class="sign-title">登录</h1>
+	            <img src="images/logo.jpg" alt=""/>
+	        </div>
+	        <div class="login-wrap">
+	            <input type="text" class="form-control" placeholder="请输入用户名" autofocus>
+	            <input type="password" class="form-control" placeholder="请输入密码">
+
+	            <label class="error" id="error"><i class="fa fa-times-circle rightb">请先登录</i></label>
+
+	            <button class="btn btn-lg btn-login btn-block" type="submit">
+	                <i class="fa fa-check"></i>
+	            </button>
+
+	            <div class="registration">
+	                没有账号？
+	                <a class="" href="registration.html">
+	                    立即注册
+	                </a>
+	            </div>
+	            <label class="checkbox">
+	                <input type="checkbox" value="remember-me"> 记住密码
+	                <span class="pull-right">
+	                    <a data-toggle="modal" href="#myModal"> 忘记密码?</a>
+
+	                </span>
+	            </label>
+
+	        </div>
+
+	        <!-- Modal -->
+	        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+	            <div class="modal-dialog">
+	                <div class="modal-content">
+	                    <div class="modal-header">
+	                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                        <h4 class="modal-title">Forgot Password ?</h4>
+	                    </div>
+	                    <div class="modal-body">
+	                        <p>Enter your e-mail address below to reset your password.</p>
+	                        <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
+	                    </div>
+	                    <div class="modal-footer">
+	                        <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+	                        <button class="btn btn-primary" type="button">Submit</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <!-- modal -->
+	    </form>
+	</div>
+	<div class="footer">
+		<p>成都灵云智联信息技术有限公司 © 2016-2018 蜀ICP备 00000000号</p>
+	</div>
+</html>

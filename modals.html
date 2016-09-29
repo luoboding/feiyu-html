@@ -14,13 +14,6 @@
   <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
   <link href="js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
   <link href="js/iCheck/skins/square/square.css" rel="stylesheet">
-  <!-- <link href="js/iCheck/skins/square/red.css" rel="stylesheet"> -->
-  <link href="js/iCheck/skins/square/yellow.css" rel="stylesheet">
-  <link href="js/iCheck/skins/flat/yellow.css" rel="stylesheet">
-  <link href="js/iCheck/skins/minimal/yellow.css" rel="stylesheet">
-  <link href="js/iCheck/skins/polaris/yellow.css" rel="stylesheet">
-  <link href="js/iCheck/skins/futurico/yellow.css" rel="stylesheet">
-  <link rel="stylesheet" href="js/ckeditor/skins/moono/editor.css">
 
   <!--pickers css-->
   <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
@@ -318,17 +311,17 @@
                         <label class="control-label col-md-1 no-padding">负责人:</label>
                         <div class="col-md-5">
                             <select class="form-control input-group input-large custom-date-range">
-                                <option>四川省</option>
-                                <option>北京</option>
-                                <option>上海</option>
+                                <option>张力</option>
+                                <option>李思</option>
+                                <option>王武</option>
                              </select>
                         </div>
                         <label class="control-label col-md-1 no-padding">等级:</label>
                         <div class="col-md-5">
                             <select class="form-control input-group input-large custom-date-range">
-                                <option>四川省</option>
-                                <option>北京</option>
-                                <option>上海</option>
+                                <option>VIP</option>
+                                <option>大客户</option>
+                                <option>普通客户</option>
                              </select>
                         </div>
                     </div>
@@ -583,16 +576,7 @@
                                       <span>全国</span>
                                   </a>
                               		<ul class="sub-menu-list">
-                                      <!-- <li class="dropdown open">
-                                            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-expanded="true">
-                                                <b class="caret"></b>西南战区
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">四川省</a></li>
-                                                <li><a href="#">云南省</a></li>
-                                            </ul>
-                                  		</li> -->
-                                      <li>
+                                    <li>
                                         <select class="form-control input-group input-large custom-date-range">
                                             <option>选择类型</option>
                                             <option>门类</option>
@@ -1111,10 +1095,10 @@
 
 
     <!-- Modal 方案预览 action -->
-    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-Plan-preview">
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#Plan-preview">
         <a href="#">方案预览 </a>
     </div>
-    <div class="modal fade" id="add-Plan-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="Plan-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-Plan-preview" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1139,37 +1123,34 @@
                         </div>
                     </div>
 
-
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-                            </ol>
-                              <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item">
-                                    <img src="./images/u1759.png" alt="...">
-                                </div>
-                                <div class="item">
-                                  <img src="./images/u1761.png" alt="...">
-                                </div>
-                                <div class="item active">
-                                  <img src="./images/u1763.png" alt="...">
-                                </div>
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+                        </ol>
+                          <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item">
+                                <img src="./images/u1759.png" alt="...">
                             </div>
-
-                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                    <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                    <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                            <div class="item">
+                              <img src="./images/u1761.png" alt="...">
+                            </div>
+                            <div class="item active">
+                              <img src="./images/u1763.png" alt="...">
+                            </div>
                         </div>
 
-
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
+                        </a>
+                    </div>
                     <div class="form-group">
-                            <textarea name="name" rows="10" class="col-sm-12 col-xs-12" placeholder="请输入正文">
+                        <textarea name="name" rows="10" class="col-sm-12 col-xs-12" placeholder="请输入正文">
                                                           各位亲爱的经销商家人们：
                               为帮助各位经销商更好的执行3.15活动，现特将“飞宇门窗3.15活动执行文案”下发，具体要求如下：
                               1、3月5日开始便可启动“2016年3.15飞宇门窗“服务进万家”活动，可以安排专人进小区驻点，所有人均可登记信息申请免费检查、维护门窗产品，不限任何品牌。也可在门店进行宣传。备注：上门检查、维护时间可在3月之后，自行安排；人员是各经销商店面安装维护人员。
@@ -1182,9 +1163,9 @@
 
                               营销中心   市场部
                               2016年1月20日
-                            </textarea>                  
+                        </textarea>                  
                     </div>
-                    <div class="form-group directory-info-row">  
+                    <div class="directory-info-row">  
                         <ul class="social-links">
                             <li>
                                 <a data-placement="top" class="tooltips" href="" data-original-title="赞">
@@ -1202,7 +1183,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a data-placement="top" class="tooltips" href="" data-original-title="预览" data-toggle="modal" data-target="#add-Plan-preview-modal">
+                                <a data-placement="top" class="tooltips" href="" data-original-title="预览" data-toggle="modal" data-target="#Plan-preview-modal">
                                     <i class="fa fa-camera"></i>
                                 </a>
                             </li>
@@ -1220,7 +1201,7 @@
 
     <!-- Modal 方案预览内容弹出框 action -->
 
-    <div class="modal fade" id="add-Plan-preview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="Plan-preview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-Plan-preview" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1334,10 +1315,10 @@
 
 
     <!-- Modal 装修跟踪 action -->
-    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-decoration">
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#decoration">
         <a href="#">装修跟踪 </a>
     </div>
-    <div class="modal fade" id="add-decoration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="decoration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-decoration" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1538,10 +1519,10 @@
 
 
        <!-- Modal巡店跟踪 action -->
-    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-patrol-result">
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#patrol-result">
         <a href="#">巡店跟踪</a>
     </div>
-    <div class="modal fade" id="add-patrol-result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="patrol-result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-patrol-result" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1551,7 +1532,7 @@
 
             <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
                 <div class="modal-body clearfix">
-                    <div class="col-md-5 col-sm-5">
+                    <div class="col-md-5 col-sm-5 no-padding">
                         <ul>
                             <li>                                <label>门店：</label>
                                 <span>xxx经销商 1 号门店</span>
@@ -1611,10 +1592,395 @@
                 <h4 class="modal-title" id="myModalLabel">巡店跟踪 —张力 —xxxx经销商 <span>1号店</span> </h4>
             </div>
 
+            <section class="panel pic-show-content">
+                <div class="tab-content">
+                    <div class="tab-pane" id="pic-1">
+                        <img src="./images/u1761.png">
+                    </div>
+                    <div class="tab-pane active" id="pic-2">
+                        <img src="./images/u1759.png">
+                    </div>
+                    <div class="tab-pane" id="pic-3">
+                        <img src="./images/u1763.png">
+                    </div>
+                    <div class="tab-pane" id="pic-4">
+                        <img src="./images/u1759.png">
+                    </div>
+                    <div class="tab-pane" id="pic-5">
+                        <img src="./images/u1761.png">
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <ul class="nav nav-tabs">
+                        <li class="">
+                            <a href="#pic-1" data-toggle="tab">
+                                <img src="./images/u1761.png">
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#pic-2" data-toggle="tab">
+                                <img src="./images/u1759.png">
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#pic-3" data-toggle="tab">
+                                <img src="./images/u1763.png">
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#pic-4" data-toggle="tab">
+                                <img src="./images/u1759.png">
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#pic-5" data-toggle="tab">
+                                <img src="./images/u1761.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a class="turn-icon pull-left" href="#">
+                    <i class="fa fa-angle-left "></i>
+                </a>
+                <a class="turn-icon pull-right" href="#">
+                    <i class="fa fa-angle-right "></i>
+                </a>    
+            </section>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"  data-dismiss="modal">返回预览</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+        <!-- Modal 巡店计划查看 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#patrol-check">
+        <a href="#">巡店计划查看 </a>
+    </div>
+    <div class="modal fade" id="patrol-check" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-patrol-check" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">巡店计划查看</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-md-6">
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">计划名称:</label>
+                            <div class="col-ms-9 col-xs-9">
+                                <input name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">执行日期:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <div class="input-group input-large custom-date-range" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                                   <input type="text" class="form-control dpd1" name="from" placeholder="开始时间">
+                                   <span class="input-group-addon">至</span>
+                                   <input type="text" class="form-control dpd2" name="to" placeholder="结束时间">
+                                </div>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <label class="control-label col-sm-3 no-padding">巡店要求:</label>
+                            <div class="col-sm-9 col-xs-9">
+                                <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                </textarea>
+                            </div>
+                       </div>
+                       <div class="form-group">
+                            <div class="col-sm-3 no-padding">
+                                <!-- <div class="form-group"> -->
+                                     <label class="control-label pull-right">巡店人员:</label>
+                                <!-- </div>
+                                <div class="form-group"> -->
+                                     <button type="button" name="button" class="btn btn-default pull-right">添加</button>
+                                <!-- </div> -->
+                            </div>
+
+                           <div class="col-sm-9 col-xs-9">
+                               <textarea name="name" rows="6" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                               </textarea>
+                           </div>
+                       </div>
+                       <div class="col-sm-12">
+                            <label class="control-label col-md-3 no-padding">适用范围:</label>
+                            <div class="menu-list">
+                                  <a href="#index.html" class="btn btn-default">
+                                      <b class="caret"></b>
+                                      <span>全国</span>
+                                  </a>
+                                  <ul class="sub-menu-list">
+                                      <li>
+                                          <select class="form-control input-group input-large custom-date-range">
+                                              <option>北区</option>
+                                              <option>北京</option>
+                                              <option>天津</option>
+                                           </select>
+                                      </li>
+                                      <li>
+                                          <select class="form-control input-group input-large custom-date-range">
+                                              <option>南区</option>
+                                              <option>云南</option>
+                                              <option>四川</option>
+                                           </select>
+                                      </li>
+                                      <li>
+                                          <select class="form-control input-group input-large custom-date-range">
+                                              <option>东部</option>
+                                              <option>广东</option>
+                                              <option>上海</option>
+                                           </select>
+                                      </li>
+                                  </ul>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <ul class="goal-progress">
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                  <small>
+                                      <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                      参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                  </small>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                      <small>
+                                          <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                          参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                      </small>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                      <small>
+                                          <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                          参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                      </small>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                      <small>
+                                          <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                          参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                      </small>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="details">
+                                  <div>张力
+                                      <i class="fa fa-star toggle-active mg-l-xs mg-r-xs active"></i>
+                                      <span class="pull-right"> 2016-11-11</span>
+                                  </div>
+                                  <small>XXXX经销商   1门店</small>
+                                  <div>
+                                      <small>
+                                          <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                          参观了活动准备情况，及时沟通了进行细节，XXX希望得到更多政策支持......
+                                      </small>
+                                  </div>
+                              </div>
+                          </li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Modal 案例展示弹窗 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#case-show">
+        <a href="#">案例展示弹窗 </a>
+    </div>
+    <div class="modal fade" id="case-show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-case-show" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">案例—XXXX01</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div id="carousel-case-show" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-case-show" data-slide-to="0" class=""></li>
+                            <li data-target="#carousel-case-show" data-slide-to="1" class="active"></li>
+                            <li data-target="#carousel-case-show" data-slide-to="2" class=""></li>
+                        </ol>
+
+                         <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item">
+                                <img src="./images/u5474.jpg" alt="...">
+                                <div class="carousel-caption">
+                                  <p>此案例关联产品：门类 NSD 03231</p>
+                                </div>
+                            </div>
+                            <div class="item active">
+                                <img src="./images/u5493.jpg" alt="...">
+                                <div class="carousel-caption">
+                                  <p>此案例关联产品：门类 NSD 03231</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="./images/u5529.jpg" alt="...">
+                                <div class="carousel-caption">
+                                  <p>此案例关联产品：门类 NSD 03231</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control" href="#carousel-case-show" role="button" data-slide="prev">
+                            <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-case-show" role="button" data-slide="next">
+                            <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  data-dismiss="modal">关闭预览</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Modal 客户信息 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#Customer-information">
+        <a href="#">客户信息 </a>
+    </div>
+    <div class="modal fade" id="Customer-information" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">客户信息</h4>
+            </div>
+
+            <form action="<?php echo U('Yggl/add');?>" method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">姓名:</label>
+                        <div class="col-md-4">
+                            <input name="name" class="form-control" placeholder="李四" type="text">
+                        </div>
+                        <label class="control-label col-md-2">性别:</label>
+                        <input  type="radio"  value="1"  name="sex">先生
+                            &nbsp;&nbsp;
+                        <input type="radio"  value="0"  name="sex">女士
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">电话:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="phone" placeholder="1333333333" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">住址:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="address"  placeholder="xx区xx街道xx号" type="text">
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="panel">
+                    <div class="panel-heading">
+                      客户跟踪记录
+                    </div>
+                    <ul class="panel-body">
+                        <li>
+                            <span>2016-6-15</span>
+                            <span>12:30</span>
+                            <span>咨询中</span>
+                            <span>由【张力登记】</span>
+                        </li>
+                        <li>
+                            <span>2016-6-15</span>
+                            <span>12:30</span>
+                            <span>设计图</span>
+                            <span>由【张力登记】</span>
+                        </li>
+                        <li>
+                            <span>2016-6-15</span>
+                            <span>12:30</span>
+                            <span>询价</span>
+                            <span>由【张力登记】</span>
+                        </li>
+                        <li>
+                            <span>2016-6-15</span>
+                            <span>12:30</span>
+                            <span>跟踪 客户意愿很大</span>
+                            <span>由【张力登记】</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭<tton>
+                    <button type="button" class="btn btn-primary">保存<tton>
+                </div>
+            </form>
 
         </div>
       </div>
     </div>
+
 
     <!-- Placed js at the end of the document so the pages load faster -->
 
@@ -1672,5 +2038,6 @@
 
     <!--pickers initialization-->
     <script src="js/pickers-init.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 
 </html>
