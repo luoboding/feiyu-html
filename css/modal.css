@@ -56,16 +56,14 @@ form{
 	padding-left: 25px;
 }
 textarea{
-		margin: 0 15px;
-		border: 1px solid #ccc;
-		border-radius: 4px;
+	margin: 0 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 .btn-file{
 	margin-left: 15px;
 	padding: 5px 25px;
 }
-
-
 .modal-Order{
 	  width: 850px;
 }
@@ -473,3 +471,13 @@ td, th{
 .modal-case-show{
 	width: 90%;
 }
+
+ .form-group .fa{
+    padding-right:4px;
+ }
+ .modal-massage li{
+ 	float: left;
+ 	padding: 10px 15px;
+
+
+ }

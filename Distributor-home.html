@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>飞宇信息化系统</title>
+
+  <!--icheck-->
+  <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
+
+    <!--pickers css-->
+ <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-responsive.css">
+  <link rel="stylesheet" href="./css/fileinput.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" type="text/css" href="./">
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '最近7天销量'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: [{
+            categories: ['7-10', '7-11', '7-12', '7-13', '7-14', '7-15',
+                '7-16'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '到店',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '下单',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} ',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '下单',
+            type: 'column',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+            tooltip: {
+                valueSuffix: ' 人'
+            }
+
+        }, {
+            name: '到店',
+            type: 'spline',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2],
+            tooltip: {
+                valueSuffix: '个'
+            }
+        }]
+    });
+    $('#container2').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '门窗关注度TOP5'
+        },
+        xAxis: {
+            categories: ['门类1', '门类2', '门类3', '门类4', '门类5']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '关注度总数量'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '到店记录',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: '案例访问',
+            data: [2, 2, 3, 2, 1]
+        }]
+    });
+});
+
+		</script>
+
+</head>
+
+<body class="Distributor-home">
+    <header>
+        <!--logo and iconic logo start-->
+        <div class="logo hidden-xs">
+            <a href="index.html">
+                <img width="200px" src="./images/05_03.jpg" alt="">
+            </a>
+        </div>
+        <!-- header section start-->
+        <div class="header-section">
+            <div class="pull-left hidden-md hidden-sm hidden-xs">
+                <span class="header-special">飞宇门窗营销管理平台</span>欢迎您 , garyZhang !
+            </div>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <ul class="notification-menu">
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="发送消息" >
+                        <i class="fa fa-comment"></i>
+                         <div>发送消息</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增订单"  >
+                        <i class="fa fa-copy"></i>
+                         <div>新增订单</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增经销商"  >
+                        <i class="fa fa-group"></i>
+                         <div>新增经销商</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增方案"  >
+                        <i class="fa fa-pencil"></i>
+                         <div>新增方案</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增案例"  >
+                        <i class="fa fa-file-text"></i>
+                         <div>新增案例</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="巡店安排"  >
+                        <i class="fa fa-eye"></i>
+                         <div>巡店安排</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="日常汇报"  >
+                        <i class="fa fa-calendar"></i>
+                         <div>日常汇报</div>
+                    </a>
+
+                </li>
+            </ul>
+            <section class="menu-right">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/photos/user-avatar.png" alt="" />
+                    Gary zhang
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>  
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cog"></i>  
+                            编辑信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                            退出
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--notification menu end -->
+        </div>
+        <!-- header section end-->
+    </header>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">Gary zhang</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">帐号信息</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i> 
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cog"></i> 
+                            <span>编辑信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i> 
+                            <span>退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i> 
+                        <span>工作台</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>订单管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-gift"></i>
+                        <span>营销管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-building-o"></i>
+                        <span>市场管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-file-text"></i>
+                        <span>案例管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-users"></i>
+                        <span>经销商管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-user"></i>
+                        <span>客户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span>统计分析</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-volume-up"></i>
+                        <span>公告管理</span>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a href="index.html">
+                        <i class="fa fa-gear"></i>
+                        <span>系统配置</span>
+                    </a>
+                    <ul class="sub-menu-list">
+                        <li>
+                            <a href="profile.html"> 角色</a>
+                        </li>
+                        <li>
+                            <a href="invoice.html"> 系统运行配置</a>
+                        </li>
+                        <li>
+                            <a href="pricing_table.html"> 系统日志查询</a>
+                        </li>
+                        <li>
+                            <a href="timeline.html"> 微信公众号关联配置</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    <!-- page heading start-->
+    <div class="page-heading">
+        <!-- <h3>
+            工作台
+        </h3> -->
+        <ul class="breadcrumb panel">
+            <li>
+                <a href="#">
+                    <i class="fa fa-home"></i> 首页
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">工作台</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- page heading end-->
+
+    <!-- main content start-->
+    <div class="main-content" >
+        <!--body wrapper start-->
+        <div class="wrapper index-wrapper">
+            <!-- <section class="col-md-12"> -->
+              <div class="col-md-6">
+                  <div class="panel deep-purple-box">
+                      <div class="panel-body no-padding">
+                            <p>
+                                本月数据统计:￥
+                                <span>73,588</span>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
+                                    <div id="graph-donut" class="revenue-graph"><svg height="220" version="1.1" width="279" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#4acacb" d="M139.5,176.66666666666669A66.66666666666667,66.66666666666667,0,0,0,181.07879551323234,57.88811835950217" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#4acacb" stroke="none" d="M139.5,179.66666666666669A69.66666666666667,69.66666666666667,0,0,0,182.94984131132782,55.54308368567977L201.86819326984852,31.832177539253266A100,100,0,0,1,139.5,210Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#6a8bc0" d="M181.07879551323234,57.88811835950217A66.66666666666667,66.66666666666667,0,0,0,77.45101113025744,85.6203481426209" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#6a8bc0" stroke="none" d="M182.94984131132782,55.54308368567977A69.66666666666667,69.66666666666667,0,0,0,74.65880663111902,84.52326380903884L51.08019086061685,75.25899610323478A95,95,0,0,1,198.7497836063561,35.7405686622906Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#5ab6df" d="M77.45101113025744,85.6203481426209A66.66666666666667,66.66666666666667,0,0,0,97.91301928453285,162.10534981569367" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#5ab6df" stroke="none" d="M74.65880663111902,84.52326380903884A69.66666666666667,69.66666666666667,0,0,0,96.04160515233681,164.45009055739988L80.2385524804593,184.25012348736345A95,95,0,0,1,51.08019086061685,75.25899610323478Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#fe8676" d="M97.91301928453285,162.10534981569367A66.66666666666667,66.66666666666667,0,0,0,139.47905604932066,176.66666337679857" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#fe8676" stroke="none" d="M96.04160515233681,164.45009055739988A69.66666666666667,69.66666666666667,0,0,0,139.4781135715401,179.6666632287545L139.47015487028193,204.99999531193794A95,95,0,0,1,80.2385524804593,184.25012348736345Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                    <text x="139.5" y="100" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 1); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" font-weight="800" transform="matrix(1.8071,0,0,1.8071,-112.5721,-87.5659)" stroke-width="0.5533854166666666"><tspan dy="5.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 1);">New Visit</tspan></text><text x="139.5" y="120" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 1); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" transform="matrix(1.3889,0,0,1.3889,-54.247,-43.5556)" stroke-width="0.7199999999999999"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 1);">at least 70%</tspan></text></svg></div>
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <ul class="bar-legend">
+                                        <li><span class="blue"></span> Open rate</li>
+                                        <li><span class="green"></span> Click rate</li>
+                                        <li><span class="purple"></span> Share rate</li>
+                                        <li><span class="red"></span> Unsubscribed rate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                           <div id="container" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-heading">客户跟踪
+                          <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                      </div>
+                      <div class="panel-body">
+                          <ul class="goal-progress">
+                              <li>
+                                  <div class="flex-box">
+                                      <div class="col-md-2 col-sm-2 flex-box user-box no-padding">
+                                          <i class="fa fa-user"></i>
+                                          <span>张力</span>
+                                      </div>
+                                      <div class="col-md-8 col-sm-8 text-box no-padding">
+                                          <p>
+                                              13349865411
+                                          </p>
+                                          <p>成都市青羊区瑞联路54号1-1-203</p>
+                                          <p>
+                                              <time>2016年6月15日</time>
+                                              到店
+                                          </p>
+                                      </div>
+                                      <div class="col-md-2 col-sm-2">
+                                          已下单
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="flex-box">
+                                      <div class="col-md-2 col-sm-2 flex-box user-box no-padding">
+                                          <i class="fa fa-user"></i>
+                                          <span>张力</span>
+                                      </div>
+                                      <div class="col-md-8 col-sm-8 text-box no-padding">
+                                          <p>
+                                              13349865411
+                                          </p>
+                                          <p>成都市青羊区瑞联路54号1-1-203</p>
+                                          <p>
+                                              <time>2016年6月15日</time>
+                                              到店
+                                          </p>
+                                      </div>
+                                      <div class="col-md-2 col-sm-2">
+                                          已下单
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="panel massage">
+                      <div class="panel-heading">消息通知
+                          <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                      </div>
+                      <div class="panel-body">
+                          <div class="panel-heading panel-title">
+                              <i class="fa fa-volume-up"></i> 关于某某某会议的通知 <span class="pull-right" style="margin-right: 50px;"> 2015-08-09 12:00:00</span>
+                          </div>
+                          <div class="panel-body massage-content">
+                             <span class="panel-text-massage">原定于明天与公司大会议室开会讨论,会议主题 ,原定于明天与公司大会议室开会讨论,会议主题......</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-heading">
+                          <i class="fa fa-circle text-primary mg-r-xs"></i>订单信息
+                          <a href="javascript:;" class="btn btn-info btn-xs btn-rounded pull-right pd-l-sm pd-r-sm">更多</a>
+                      </div>
+                      <div class="panel-body extra-pad">
+                           <ul class="goal-progress">
+                              <li>
+                                  <div class="details">
+                                      <p>
+                                           <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                           <span class="small order-status"> 20160630001   待付款 </span>
+                                          <span class="small pull-right">2016-6-30 15:30</span>
+                                      </p>
+                                      <div class="small">
+                                          王先生- 13349865411
+                                          <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                      </div>
+                                      <div class="small">
+                                          成都市武侯区吉泰路XXXX花园1-1-12-1
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+
+                                  <div class="details">
+                                      <p>
+                                           <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                           <span class="small order-status"> 20160630001   待付款 </span>
+                                          <span class="small pull-right">2016-6-30 15:30</span>
+
+                                      </p>
+                                      <div class="small">
+                                          王先生- 13349865411
+                                          <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                      </div>
+                                      <div class="small">
+                                          成都市武侯区吉泰路XXXX花园1-1-12-1
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="details">
+                                      <p>
+                                           <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                           <span class="small order-status"> 20160630001   待付款 </span>
+                                          <span class="small pull-right">2016-6-30 15:30</span>
+
+                                      </p>
+                                      <div class="small">
+                                          王先生- 13349865411
+                                          <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                      </div>
+                                      <div class="small">
+                                          成都市武侯区吉泰路XXXX花园1-1-12-1
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="details">
+                                      <p>
+                                           <i class="fa fa-circle text-primary mg-r-xs"></i>
+                                           <span class="small order-status"> 20160630001   待付款 </span>
+                                          <span class="small pull-right">2016-6-30 15:30</span>
+
+                                      </p>
+                                      <div class="small">
+                                          王先生- 13349865411
+                                          <span style="margin-left: 100px;">李秀丽  城南富森美门店 </span>
+                                      </div>
+                                      <div class="small">
+                                          成都市武侯区吉泰路XXXX花园1-1-12-1
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+            <!-- </section> -->
+            <!--<section class="col-md-6"> -->
+
+
+
+
+
+            <!-- </section> -->
+        </div>
+        <!--body wrapper end-->
+
+        <footer>
+            2016 &copy; 成都盈客网络科技有限公司
+        </footer>
+    </div>
+    <!-- main content end-->
+
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--icheck -->
+<script src="js/iCheck/jquery.icheck.js"></script>
+<script src="js/icheck-init.js"></script>
+
+<!--Morris Chart 饼形图-->
+<script src="js/morris-chart/morris.js"></script>
+<script src="js/morris-chart/raphael-min.js"></script>
+
+<!--common scripts for all pages左侧栏二级菜单-->
+<script src="js/scripts.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<!--Dashboard Charts条形图-->
+<script src="js/dashboard-chart-init.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+</body>
+</html>

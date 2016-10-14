@@ -490,7 +490,7 @@ h5.left-nav-title {
 }
 
 .left-side-collapsed .custom-nav {
-    margin: 2px 0 20px 0;
+    margin: 58px 0 20px 0;
 }
 
 .left-side-collapsed .custom-nav li a {
@@ -907,13 +907,12 @@ h5.left-nav-title {
 /* ------------------------------
         STICKY HEADER
 ---------------------------------*/
-
-.sticky-header .logo {
+.logo {
     width: 240px;
     min-width: 240px;
 }
 
-.sticky-header .left-side {
+.left-side {
     top: 110px;
 }
 
@@ -990,9 +989,9 @@ h5.left-nav-title {
 }
 
 .index-wrapper{
-    /*padding-top: 95px;*/
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .wrapper::after {
@@ -1171,9 +1170,11 @@ footer.sticky-footer {
 /*-----------------------------------
      HEADER STATISTICS STYLES
 -------------------------------------*/
-.summary-box{
-  box-shadow: 0 5px 0 rgba(248, 196, 0, 0.29);
-}
+/*.summary-box{
+    background: #49586e;
+    box-shadow: 0 5px 0 #424f63;
+    color: #f5f5f5;
+}*/
 .state-info {
   /*position: absolute;
   right: 15px;
@@ -1300,10 +1301,25 @@ footer.sticky-footer {
     MORE STATISTICS BOX
 -------------------------------------*/
 
+.summary-box,
 .panel.deep-purple-box {
     background: #49586e;
     box-shadow: 0 5px 0 #424f63;
-    color: #fff;
+    color: #f5f5f5;;
+}
+
+.panel.deep-purple-box p{
+    padding: 30px 15px 10px 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.panel.deep-purple-box p>span{
+    font-size: 30px;
+}
+
+.panel.deep-purple-box .row{
+    padding-bottom: 15px;
 }
 
 ul.bar-legend {
@@ -1478,7 +1494,8 @@ ul.goal-progress li .prog-avatar img {
 
 ul.goal-progress li .details>.small,
 ul.goal-progress li .details small{
-  line-height: 20px;
+    line-height: 23px;
+    font-size: 14px;
 }
 
 ul.goal-progress li:hover .details>.small,
@@ -1566,9 +1583,9 @@ ul.pros-chart li:last-child {
         GREEN BOX [EASY PIE CHART] STYLES
 -------------------------------------------*/
 
-.green-box {
-    background: none repeat scroll 0 0 #65cea7;
-    box-shadow: 0 5px 0 #5bb996;
+.gray-box {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 0 5px 0 #ababab;
     color: #fff;
 }
 
@@ -1583,18 +1600,18 @@ ul.pros-chart li:last-child {
 .percent {
     color: #000;
     display: inline-block;
-    font-size: 25px;
+    font-size: 40px;
     z-index: 2;
     position: absolute;
     width: 90px;
-    padding-top: 35px;
-    left: 50%;
+    padding-top: 46px;
+    left: 33%;
 }
 
 .percent .sm {
     font-size: 11px;
     display: block;
-    padding-top: 32px;
+    padding-top: 15px;
 }
 
 .extra-pad {
@@ -3826,7 +3843,7 @@ ul.activity-list .activity-desk h5 a {
 
 .revenue-graph{
 
-    height:220px;
+    height:235px;
 }
 
 /*--------------------------------------------
@@ -4988,3 +5005,6 @@ table.table-content tr>th:hover,
 table.table-content tr>th.selected{
   background-color: #100e05;
 }
+ .form-group .fa{
+    padding-right:2px;
+ }

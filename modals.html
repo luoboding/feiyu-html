@@ -1583,8 +1583,8 @@
         </div>
       </div>
     </div>
-<!-- Modal巡店跟踪图片点开后图片展示 action -->
-     <div class="modal fade" id="picture-show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <!-- Modal巡店跟踪图片点开后图片展示 action -->
+    <div class="modal fade" id="picture-show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-picture-show" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1916,7 +1916,9 @@
             <form action="<?php echo U('Yggl/add');?>" method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label class="control-label col-md-2">姓名:</label>
+                        <label class="control-label col-md-2">
+                            <i class="fa fa-user"></i>姓名:
+                        </label>
                         <div class="col-md-4">
                             <input name="name" class="form-control" placeholder="李四" type="text">
                         </div>
@@ -1926,13 +1928,17 @@
                         <input type="radio"  value="0"  name="sex">女士
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">电话:</label>
+                        <label class="col-sm-2 col-sm-2 control-label">
+                            <i class="fa fa-phone-square"></i>电话:
+                        </label>
                         <div class="col-sm-10">
                             <input class="form-control" name="phone" placeholder="1333333333" type="text">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">住址:</label>
+                        <label class="col-sm-2 col-sm-2 control-label">
+                            <i class="fa fa-home"></i>住址:
+                        </label>
                         <div class="col-sm-10">
                             <input class="form-control" name="address"  placeholder="xx区xx街道xx号" type="text">
                         </div>
@@ -1971,6 +1977,23 @@
                     </ul>
                 </section>
 
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <input  type="radio"  value="1"  name="sex">询价
+                        </div>
+                        <div class="col-md-4">
+                            <input  type="radio"  value="1"  name="sex">预定
+                        </div>
+                        <div class="col-md-4">
+                            <input  type="radio"  value="1"  name="sex">付款
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" class="col-md-12" placeholder="添加备注"></textarea>
+                    </div>
+                </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭<tton>
                     <button type="button" class="btn btn-primary">保存<tton>
@@ -1980,6 +2003,155 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+    <!-- Modal 会议通知 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#add-massage-1">
+        <a href="#">会议通知 </a>
+    </div>
+    <div class="modal fade" id="add-massage-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-massage" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">关于xxx会议的通知 <small class="pull-right">由xxx发布 <time class="pull-right">2016-6-30 15:30</time> </small></h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <textarea name="name" rows="10" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                                    会议通知
+                               各科室、处属各单位 ：      为贯彻落实上级会议精神，总结回顾2012年工作，
+                                安排部署2013年工作，经研究，决定召开管理处工作会议暨职工迎春联欢会，
+                                现将有关事项通知如下;
+                                一、会议时间   2013年2月5日（星期二）上午8；30 —12；00
+                                二、会议地点  管理处四楼会议室
+                                三、会议议程
+                                  1、通报全省高速公路运营管理大检查情况
+                                  2、宣读省交通厅、厅高管局、省高管中心先进集体 暨先进个人表彰决定....
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">附件:</label>
+                            <a href="#">关于会议讨论内容.doc</a>
+                        </div>
+                        <label class="control-label col-md-12 no-padding">未确认门店</label>
+                        <ul class="col-md-12">
+                            <li>门店1</li>
+                            <li>门店2</li>
+                            <li>门店3</li>
+                            <li>门店4</li>
+                            <li>门店5</li>
+                            <li>门店6</li>
+                            <li>门店7</li>
+                            <li>门店8</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确认发布</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal 员工信息 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal"  data-target="#add-employee-information">
+        <a href="#">员工信息 </a>
+    </div>
+    <div class="modal fade" id="add-employee-information" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">员工信息</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            <i class="fa fa-user"></i>姓名:
+                        </label>
+                        <div class="col-md-4">
+                            <input name="name" class="form-control" placeholder="李四" type="text">
+                        </div>
+                        <label class="control-label col-md-2">性别:</label>
+                        <input type="radio" value="1" name="sex">先生
+                            &nbsp;&nbsp;
+                        <input type="radio" value="0" name="sex">女士
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">
+                            <i class="fa fa-phone-square"></i>电话:
+                        </label>
+                        <div class="col-sm-4">
+                            <input class="form-control" name="phone" placeholder="1333333333" type="text">
+                        </div>
+                        <label class="control-label col-md-2 no-padding">入职时间:</label>
+                        <div class="col-sm-4 col-xs-4">
+                            <div data-date-minviewmode="months" data-date-viewmode="years" data-date-format="mm/yyyy" data-date="102/2012" class="input-append date dpMonths">
+                               <input type="text" value="02/2012" size="16" class="form-control">
+                               <span class="input-group-btn add-on">
+                                 <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
+                               </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">
+                            <i class="fa fa-home"></i>住址:
+                        </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="address" placeholder="xx区xx街道xx号" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2 no-padding">所属门店:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>门店1</option>
+                                <option>门店2</option>
+                                <option>门店3</option>
+                             </select>
+                        </div>
+                        <label class="control-label col-md-2 no-padding">岗位:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control input-group input-large custom-date-range">
+                                <option>店长</option>
+                                <option></option>
+                             </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer clearfix">
+                    <button type="button" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
 
 
     <!-- Placed js at the end of the document so the pages load faster -->
