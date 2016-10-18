@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5 {
 hr {
     border-color: #ddd;
 }
+ 
+ li{
+    list-style: none;
+ }
 
 .btn-warning{
     background-color: #ff8200;
@@ -5008,3 +5012,58 @@ table.table-content tr>th.selected{
  .form-group .fa{
     padding-right:2px;
  }
+
+/* case*/
+.search-box{
+    margin-top: 25px;
+}
+.case-list{
+    margin-top:15px;
+}
+.case-list dt{
+    padding-top:10px;
+}
+.case-list dd{
+    color: #999;
+    padding:10px 0;
+}
+.case .directory-info-row{
+    text-align: right;
+}
+.case .social-links>li{
+    color: #999;
+}
+.case .social-links>li:hover{
+    color: #f8c400;
+}
+.case .social-links>li:hover a{
+    background: #f8c400;
+    color: #fff;
+}
+
+.store th{
+    width: 11%;
+}
+.store td{
+    padding-right:20px;
+}
+.store .form-group{
+    border-bottom: 1px solid #ececec;
+    padding-top: 10px;
+}
+.store .store-msg{
+    margin-bottom:25px;
+}
+.store .sui-step-box li{
+    display: flex;
+    align-items: center;
+}
+.store .sui-step-box .btn{
+    color: #fff;
+    width: 100%;
+    background-color: #cfcfcf;
+}
+.store .sui-step-box .btn:hover{
+    background-color: #f8c400;
+    border-color: #f8c400;
+}

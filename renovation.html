@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>装修管理</title>
+
+  <!--icheck-->
+  <link href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.min.css" rel="stylesheet">
+
+    <!--pickers css-->
+ <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-responsive.css">
+  <link rel="stylesheet" href="./css/fileinput.css">
+  <link rel="stylesheet" href="./css/modal.css">
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '最近7天销量'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: [{
+            categories: ['7-10', '7-11', '7-12', '7-13', '7-14', '7-15',
+                '7-16'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '到店',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '下单',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} ',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        series: [{
+            name: '下单',
+            type: 'column',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+            tooltip: {
+                valueSuffix: ' 人'
+            }
+
+        }, {
+            name: '到店',
+            type: 'spline',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2],
+            tooltip: {
+                valueSuffix: '个'
+            }
+        }]
+    });
+    $('#container2').highcharts({
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '门窗关注度TOP5'
+        },
+        xAxis: {
+            categories: ['门类1', '门类2', '门类3', '门类4', '门类5']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '关注度总数量'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '到店记录',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: '案例访问',
+            data: [2, 2, 3, 2, 1]
+        }]
+    });
+});
+
+		</script>
+
+</head>
+
+<body class="store">
+    <header>
+        <!--logo and iconic logo start-->
+        <div class="logo hidden-xs">
+            <a href="index.html">
+                <img width="200px" src="./images/05_03.jpg" alt="">
+            </a>
+        </div>
+        <!-- header section start-->
+        <div class="header-section">
+            <div class="pull-left hidden-md hidden-sm hidden-xs">
+                <span class="header-special">飞宇门窗营销管理平台</span>欢迎您 , garyZhang !
+            </div>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <ul class="notification-menu">
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="发送消息" >
+                        <i class="fa fa-comment"></i>
+                         <div>发送消息</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增订单"  >
+                        <i class="fa fa-copy"></i>
+                         <div>新增订单</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增经销商"  >
+                        <i class="fa fa-group"></i>
+                         <div>新增经销商</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增方案"  >
+                        <i class="fa fa-pencil"></i>
+                         <div>新增方案</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="新增案例"  >
+                        <i class="fa fa-file-text"></i>
+                         <div>新增案例</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="巡店安排"  >
+                        <i class="fa fa-eye"></i>
+                         <div>巡店安排</div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-toggle" title="日常汇报"  >
+                        <i class="fa fa-calendar"></i>
+                         <div>日常汇报</div>
+                    </a>
+
+                </li>
+            </ul>
+            <section class="menu-right">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/photos/user-avatar.png" alt="" />
+                    Gary zhang
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>  
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cog"></i>  
+                            编辑信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                            退出
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--notification menu end -->
+        </div>
+        <!-- header section end-->
+    </header>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">Gary zhang</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">帐号信息</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i> 
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cog"></i> 
+                            <span>编辑信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i> 
+                            <span>退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i> 
+                        <span>工作台</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>订单管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-gift"></i>
+                        <span>营销管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-building-o"></i>
+                        <span>市场管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-file-text"></i>
+                        <span>案例管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-users"></i>
+                        <span>经销商管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-user"></i>
+                        <span>客户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span>统计分析</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-volume-up"></i>
+                        <span>公告管理</span>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a href="index.html">
+                        <i class="fa fa-gear"></i>
+                        <span>系统配置</span>
+                    </a>
+                    <ul class="sub-menu-list">
+                        <li>
+                            <a href="profile.html"> 角色</a>
+                        </li>
+                        <li>
+                            <a href="invoice.html"> 系统运行配置</a>
+                        </li>
+                        <li>
+                            <a href="pricing_table.html"> 系统日志查询</a>
+                        </li>
+                        <li>
+                            <a href="timeline.html"> 微信公众号关联配置</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    <!-- page heading start-->
+    <div class="page-heading">
+        <!-- <h3>
+            工作台
+        </h3> -->
+        <ul class="breadcrumb panel">
+            <li>
+                <a href="#">
+                    <i class="fa fa-home"></i> 首页
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">工作台</a>
+            </li>
+        </ul>
+    </div>
+    <!-- page heading end-->
+
+    <!-- main content start-->
+    <div class="main-content" >
+        <!--body wrapper start-->
+        <div class="wrapper index-wrapper">
+            <section class="col-md-12">
+                <div class="panel panel-body">
+                    <div class="flex-box store-msg">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">门店名称:</label>
+                                    <span>2号门店&nbsp;&nbsp;<span style="color:#f8c400;">装修中</span></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">门店负责人:</label>
+                                    <span>王五</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">负责人电话:</label>
+                                    <span>13838383838</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">门店成员:</label>
+                                    <ul class="flex-box">
+                                        <li class="padding-box"><b>王五</b>(店长)</li>
+                                        <li class="padding-box"><b>李思</b>(业务员)</li>
+                                        <li class="padding-box"><b>张叁</b>(业务员)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">门店地址:</label>
+                                    <span>成都市南门富森美201</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label col-sm-3 no-padding">送货地址:</label>
+                                    <span>成都市南门富森美201</span>
+                                </div>
+                            </div>                                                      
+                        </div>
+                        <div class="col-md-2 padding-box">
+                            <button class="btn btn-primary pull-right">管理门店</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                                <div class="col-md-5">
+                                    <label class="control-label col-sm-3 no-padding">飞宇负责人:</label>
+                                    <span>李四</span>
+                                </div>
+                                <div class="col-md-7">
+                                    <label class="control-label col-sm-3 no-padding">实施日期:</label>
+                                    <time>2016-10-11</time>至<time>2016-12-11</time>
+                                </div>
+                        </div> 
+                        <div class="form-group no-border">
+                            <div class="sui-steps steps-auto">
+                                <div class="wrap">
+                                    <div class="finished">
+                                        <label>
+                                            <span class="round">
+                                                <i class="sui-icon icon-pc-right"></i>
+                                            </span>
+                                            <span>平面图</span>
+                                        </label>
+                                        <i class="triangle-right-bg"></i>
+                                        <i class="triangle-right"></i>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="finished">
+                                        <label>
+                                            <span class="round">
+                                                <i class="sui-icon icon-pc-right"></i>
+                                            </span>
+                                            <span>样品图</span>
+                                        </label>
+                                        <i class="triangle-right-bg"></i>
+                                        <i class="triangle-right"></i>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="current">
+                                        <label>
+                                            <span class="round">2</span>
+                                            <span>施工图</span>
+                                        </label>
+                                        <i class="triangle-right-bg"></i>
+                                        <i class="triangle-right"></i>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="todo">
+                                        <label>
+                                            <span class="round">4</span>
+                                            <span>施工</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group sui-step-box">
+                            <ul class="col-sm-4">
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        发起流程
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交平面图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        确认平面图
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul class="col-sm-4">
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交样品图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-left"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        修改平面图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-left"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        确认样品图
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul class="col-sm-4">
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交施工图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        修改样品图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-left"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交施工图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        修改样品图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-left"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交工程图
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul class="col-sm-4">                
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span>
+                                        <time>2016-6-1</time>
+                                        <span>李四</span>
+                                        提交平面图
+                                    </span>
+                                    <img class="col-xs-4" src="./images/u1763.png">
+                                </li>
+                                <li>
+                                    <button class="btn btn-default">提交反馈</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!--body wrapper end-->
+
+        <footer>
+            2016 &copy; 成都盈客网络科技有限公司
+        </footer>
+    </div>
+    <!-- main content end-->
+
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--icheck -->
+<script src="js/iCheck/jquery.icheck.js"></script>
+<script src="js/icheck-init.js"></script>
+
+<!--Morris Chart 饼形图-->
+<script src="js/morris-chart/morris.js"></script>
+<script src="js/morris-chart/raphael-min.js"></script>
+
+<!--common scripts for all pages左侧栏二级菜单-->
+<script src="js/scripts.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<!--Dashboard Charts条形图-->
+<script src="js/dashboard-chart-init.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+</body>
+</html>

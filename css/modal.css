@@ -150,7 +150,7 @@ td, th{
 .modal .table-box{
 	padding:0 0 0 10px;
 }
-.modal .table-box table{
+.modal .table-box table,table{
 	margin-bottom:10px;
 	width: 100%;
 }
@@ -335,10 +335,11 @@ td, th{
 
     background-color: #f8c400;
 }
-#decoration .modal-decoration .form-group{
+.modal-decoration .form-horizontal.adminex-form .form-group,
+.sui-step-box{
 	align-items: flex-start;
 }
-.modal-decoration li{
+.sui-step-box li{
 	padding: 10px 0;
 }
 .modal-decoration li .btn-default{
@@ -440,7 +441,7 @@ td, th{
 	margin-top:45px;
 }
 #case-show .carousel-caption{
-    top: 520px;
+    top: 420px;
     font-size: 28px;
     width: 100%;
     left: 0;
@@ -449,12 +450,12 @@ td, th{
     height: 60px;
 }
 #case-show .carousel{
-	height: 580px;
+	height: 480px;
 	overflow: hidden;
 }
 #case-show .item img{
 	width: 100%;
-	height: 580px;
+	height: 480px;
 }
 #case-show .carousel-indicators{
 	left: 88%;
@@ -464,12 +465,12 @@ td, th{
 #case-show .glyphicon{
     color: #444444;
     font-size: 30px;
-    top: 270px;
+    top: 220px;
     background: #fff;
     padding: 18px 13px;
 }
 .modal-case-show{
-	width: 90%;
+	width: 70%;
 }
 
  .form-group .fa{
@@ -478,6 +479,7 @@ td, th{
  .modal-massage li{
  	float: left;
  	padding: 10px 15px;
-
-
+ }
+ #submit-feedback .form-group{
+ 	border: none;
  }

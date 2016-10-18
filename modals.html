@@ -1327,7 +1327,7 @@
             </div>
 
             <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
-                <div class="modal-body clearfix">
+                <div class="modal-body">
                     <div class="form-group">
                         <div class="col-sm-4">
                             <label class="control-label">方案名称：</label>
@@ -1388,7 +1388,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sui-step-box">
                         <ul class="col-sm-4">
                             <li>
                                 <i class="fa fa-hand-o-right"></i>
@@ -2150,6 +2150,150 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+   <!-- Modal 提交反馈 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#submit-feedback">
+        <a href="#">提交反馈 </a>
+    </div>
+    <div class="modal fade" id="submit-feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-massage" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">关于xxx会议的通知</h4>
+            </div>
+
+            <form method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body clearfix">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="form-group">
+                          <label>当前汇报状态：</label>
+                          <time>2016-07-01</time>
+                          <span>李四</span>
+                          <span class="padding-box">汇报施工情况</span>
+                        </div>
+                        <div class="form-group">
+                          <textarea name="name" rows="10" class="col-sm-12 col-xs-12 no-margin" placeholder="请输入正文">
+                                                    会议通知
+                           各科室、处属各单位 ：   为贯彻落实上级会议精神，总结回顾2012年工作，
+                           安排部署2013年工作，经研究，决定召开管理处工作会议暨职工迎春联欢会，
+                           现将有关事项通知如下;
+                               一、会议时间   2013年2月5日（星期二）上午8；30 —12；00
+                               二、会议地点  管理处四楼会议室
+                               三、会议议程
+                                  1、通报全省高速公路运营管理大检查情况
+                                  2、宣读省交通厅、厅高管局、省高管中心先进集体 暨先进个人表彰决定....
+                          </textarea>
+                       </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <a href="#" class="padding-box">验收文档.rar</a>
+                            <a href="#" class="padding-box">验收照片.rar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">验收完毕</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">验收不通过</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal 门店管理 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#store-manageme">
+        <a href="#">门店管理 </a>
+    </div>
+    <div class="modal fade" id="store-manageme" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">门店管理</h4>
+            </div>
+
+            <form action="<?php echo U('Yggl/add');?>" method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">门店名称:</label>
+                        <span class="col-sm-10">2号门店&nbsp;&nbsp;<span style="color:#f8c400;">装修中</span></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">门店地址:</label>
+                        <span class="col-sm-10">成都市南门富森美2-203</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">
+                            送货地址:
+                        </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="address"  placeholder="成都市南门富森美2-203" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">                            
+                        <label class="control-label col-sm-2">店长：</label>
+                        <div class="col-sm-4">
+                            <input class="form-control" name="address"  placeholder="成都市南门富森美2-203" type="text">
+                        </div>
+                        <label class="control-label col-sm-2 no-padding">联系电话：</label>
+                        <span>13344455555</span>
+                    </div>
+                </div>
+                <section>
+                    <div class="panel-heading">
+                        店员
+                        <button type="button" class="btn-primary pull-right">添加店员</button>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>
+                                <span>张三</span>
+                                <span class="padding-box">店长</span>
+                                <span>13333445566</span>
+                            </li>
+                            <li>
+                                <span>李思</span>
+                                <span class="padding-box">业务员</span>
+                                <span>13333445566</span>
+                            </li>
+                            <li>
+                                <span>李思</span>
+                                <span class="padding-box">业务员</span>
+                                <span>13333445566</span>
+                            </li>
+                            <li>
+                                <span>李思</span>
+                                <span class="padding-box">业务员</span>
+                                <span>13333445566</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">保存修改</button>
+                </div>
+            </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
 
 
 
