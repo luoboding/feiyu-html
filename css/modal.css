@@ -126,7 +126,6 @@ td, th{
 .upload-img{
 	padding: 0;
 	margin-left: 15px;
-	margin-bottom: 15px;
 }
 .upload-img img{
 	min-width: 100%;
@@ -286,14 +285,14 @@ td, th{
 	padding-left: 10px;
 }
 .btn-primary a:focus,
-.btn-primary a:active, 
+.btn-primary a:active,
 .btn-primary a:hover{
 	text-decoration: none;
 }
-.btn-primary:hover, 
-.btn-primary:focus, 
-.btn-primary:active, 
-.btn-primary.active, 
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
 .open .dropdown-toggle.btn-primary{
 	background-color: #f8c400;
     border-color: #f8c400;
@@ -380,7 +379,7 @@ td, th{
 }
 .modal .nav-tabs li img{
 	width:130px;
-	height: 80px; 
+	height: 80px;
 }
 .modal .nav-tabs{
 	border: none;
@@ -407,8 +406,8 @@ td, th{
 .nav-tabs{
 	min-width: 815px;
 }
-.nav-tabs>li.active>a, 
-.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li>a:hover{
 	border: none;
@@ -482,4 +481,22 @@ td, th{
  }
  #submit-feedback .form-group{
  	border: none;
+ }
+
+
+ .upload-img{
+	 position: relative;
+ }
+ .upload-img .close{
+	 position: absolute;
+	 right: -10px;
+	 top: -10px;
+	 background: #f8c400;
+	 border-radius: 50%;
+	 opacity: 1;
+	 color: #fff;
+	 width: 21px;
+ }
+ .form-group label{
+	 font-weight: 700;
  }
