@@ -496,6 +496,7 @@ td, th{
 	 opacity: 1;
 	 color: #fff;
 	 width: 21px;
+	 outline: none;
  }
  .form-group label{
 	 font-weight: 700;

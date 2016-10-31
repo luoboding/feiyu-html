@@ -33,6 +33,7 @@
   <link href="css/style-responsive.css" rel="stylesheet">
   <link href="css/modal.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/fileinput.css">
+  <link rel="stylesheet" type="text/css" href="./css/add-modal-style.css">
 
   <script src="js/jquery-1.10.2.min.js"></script>
 </head>
@@ -2312,6 +2313,101 @@
         </div>
     </div>
 
+
+
+
+
+    <!-- Modal 营销方案-评论 action -->
+    <div class="modal-box btn btn-primary" data-toggle="modal" data-target="#comment">
+        <a href="#">营销方案-评论 </a>
+    </div>
+    <div class="modal fade" id="comment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">方案预览-双11公司营销方案</h4>
+              </div>
+
+              <form action="<?php echo U('Yggl/add');?>" method="post"  enctype="multipart/form-data" class="form-horizontal adminex-form">
+                  <div class="modal-body">
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <p>方案设计图很棒，但是请更多体现出优惠信息</p>
+                              <p class="gray">
+                                  <small>
+                                      张三
+                                      <time>2016-10-15 15：30</time>
+                                      发表
+                                  </small>
+                              </p>
+                              <p class="answer"><label>回复:</label>
+                                  本方案为飞宇营销需要，请务必参加，有困难可像业务人员反应，我们力争解决
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <p>这个方案对我们完全不适用，本地区此类产品销量一直很小，没有参加的必要</p>
+                              <p class="gray">
+                                  <small>
+                                      匿名用户
+                                      <time>2016-10-15 15：30</time>
+                                      发表
+                                  </small>
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <p>方案设计图很棒，但是请更多体现出优惠信息</p>
+                              <p class="gray">
+                                  <small>
+                                      张三
+                                      <time>2016-10-15 15：30</time>
+                                      发表
+                                  </small>
+                              </p>
+                              <p class="answer"><label>回复:</label>
+                                  本方案为飞宇营销需要，请务必参加，有困难可像业务人员反应，我们力争解决
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <p>这个方案对我们完全不适用，本地区此类产品销量一直很小，没有参加的必要</p>
+                              <p class="gray">
+                                  <small>
+                                      匿名用户
+                                      <time>2016-10-15 15：30</time>
+                                      发表
+                                  </small>
+                              </p>
+                          </div>
+                      </div>
+
+
+
+                  </div>
+                  <div class="modal-footer">
+                          <p>请留下您宝贵的意见</p>
+                          <div class="form-group">
+                              <textarea class="col-xs-9" rows="4">请输入您宝贵的意见</textarea>
+                           
+                              <div class="col-xs-3">
+                                <button class="btn btn-default col-xs-12">发表</button>
+                                <input type="checkbox" name="checkbox">匿名发表
+                              </div>
+                          </div>
+                    
+                  </div> 
+              </form>
+            </div>
+        </div>
+    </div>
 
 
 

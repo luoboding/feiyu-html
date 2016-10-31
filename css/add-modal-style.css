@@ -1,0 +1,15 @@
+.answer{
+	color: #b18c00;
+}
+.gray{
+	color: #bbb;
+}
+#comment .modal-footer{
+	text-align: left;
+}
+#comment .modal-footer textarea{
+	border-radius: 0;
+}
+#comment .modal-footer .btn-default{
+	margin-bottom: 10px;
+}
