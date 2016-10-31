@@ -4,6 +4,15 @@
 .gray{
 	color: #bbb;
 }
+#comment .pagination li{
+	display: inline-block;
+}
+#comment .pagination li a{
+	background-color: #fff;
+}
+#comment .pagination > li.active > a{
+	background-color: #f8c400;
+}
 #comment .modal-footer{
 	text-align: left;
 }
