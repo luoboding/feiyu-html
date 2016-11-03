@@ -26,126 +26,9 @@
   <link rel="stylesheet" href="css/style-responsive.css">
   <link rel="stylesheet" href="./css/fileinput.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" type="text/css" href="./css/case.css">
 
-<script src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript">
-$(function () {
-    $('#container').highcharts({
-        credits:{
-            enabled:false // 禁用版权信息
-        },
-
-        chart: {
-            zoomType: 'xy'
-        },
-        title: {
-            text: '最近7天销量'
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: [{
-            categories: ['7-10', '7-11', '7-12', '7-13', '7-14', '7-15',
-                '7-16'],
-            crosshair: true
-        }],
-        yAxis: [{ // Primary yAxis
-            labels: {
-                format: '{value}',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
-            },
-            title: {
-                text: '到店',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
-            }
-        }, { // Secondary yAxis
-            title: {
-                text: '下单',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
-            },
-            labels: {
-                format: '{value} ',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
-            },
-            opposite: true
-        }],
-        tooltip: {
-            shared: true
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            x: 120,
-            verticalAlign: 'top',
-            y: 100,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-        },
-        series: [{
-            name: '下单',
-            type: 'column',
-            yAxis: 1,
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
-            tooltip: {
-                valueSuffix: ' 人'
-            }
-
-        }, {
-            name: '到店',
-            type: 'spline',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2],
-            tooltip: {
-                valueSuffix: '个'
-            }
-        }]
-    });
-    $('#container2').highcharts({
-        credits:{
-            enabled:false // 禁用版权信息
-        },
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: '门窗关注度TOP5'
-        },
-        xAxis: {
-            categories: ['门类1', '门类2', '门类3', '门类4', '门类5']
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: '关注度总数量'
-            }
-        },
-        legend: {
-            reversed: true
-        },
-        plotOptions: {
-            series: {
-                stacking: 'normal'
-            }
-        },
-        series: [{
-            name: '到店记录',
-            data: [5, 3, 4, 7, 2]
-        }, {
-            name: '案例访问',
-            data: [2, 2, 3, 2, 1]
-        }]
-    });
-});
-
-		</script>
-
+    <script src="js/jquery-1.10.2.min.js"></script>
 </head>
 
 <body class="case">
@@ -338,273 +221,366 @@ $(function () {
         <div class="wrapper">
             <div class="col-lg-12 table-box">
                 <div class="panel panel-body">
-                    <table class="table-content">
-                       <tbody>
-                           <tr>
-                              <th class="selected">风格</th>
-                              <td>实木 </td>
-                              <td>混合 </td>
-                              <td>铝材 </td>
-                              <td>不锈钢 </td>
-                           </tr>
-                           <tr>
-                              <th>风格</th>
-                              <td>实木 </td>
-                              <td class="selected">混合 </td>
-                              <td>铝材 </td>
-                              <td>不锈钢 </td>
-                           </tr>
-                           <tr>
-                              <th>风格</th>
-                              <td>实木 </td>
-                              <td>混合 </td>
-                              <td>铝材 </td>
-                              <td>不锈钢 </td>
-                           </tr>
-                           <tr>
-                              <th>风格</th>
-                              <td>实木 </td>
-                              <td>混合 </td>
-                              <td>铝材 </td>
-                              <td>不锈钢 </td>
-                           </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="col-lg-12 search-box">
-                <button class="btn btn-default">图片模式</button>
-                <button class="btn btn-default">列表模式</button>
-                <div class="col-lg-4 pull-right">
-                    <input type="text" class="form-control" name="keyword" placeholder="Search here...">
+                    <div class="select-list flex-box">
+                        <h5>材质:</h5>
+                        <ul class="flex-box">
+                            <li>
+                                <a href="">实木</a>
+                            </li>
+                            <li>
+                                <a href="">多层</a>
+                            </li>
+                            <li>
+                                <a href="">混合</a>
+                            </li>
+                            <li>
+                                <a href="">不锈钢</a>
+                            </li>
+                            <li>
+                                <a href="">钛镁合金</a>
+                            </li>
+                            <li class="active">
+                                <a href="">塑钢</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-list flex-box">
+                        <h5>风格:</h5>
+                        <ul class="flex-box">
+                            <li>
+                                <a href="">现代简约</a>
+                            </li>
+                            <li>
+                                <a href="">简欧</a>
+                            </li>
+                            <li class="active">
+                                <a href="">中式</a>
+                            </li>
+                            <li>
+                                <a href="">混搭</a>
+                            </li>
+                            <li>
+                                <a href="">美式</a>
+                            </li>
+                            <li>
+                                <a href="">田园</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-list flex-box">
+                        <h5>功能:</h5>
+                        <ul class="flex-box">
+                            <li>
+                                <a href="">阳台</a>
+                            </li>
+                            <li>
+                                <a href="">客厅</a>
+                            </li>
+                            <li class="active">
+                                <a href="">厨房</a>
+                            </li>
+                            <li>
+                                <a href="">卧室</a>
+                            </li>
+                            <li>
+                                <a href="">衣帽间</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="select-list flex-box">
+                        <h5>颜色:</h5>
+                        <ul class="flex-box">
+                            <li>
+                                <a href="">白色</a>
+                            </li>
+                            <li class="active">
+                                <a href="">白枫色</a>
+                            </li>
+                            <li>
+                                <a href="">胡桃色</a>
+                            </li>
+                            <li>
+                                <a href="">黄色</a>
+                            </li>
+                            <li>
+                                <a href="">红色</a>
+                            </li>
+                            <li>
+                                <a href="">蓝色</a>
+                            </li>
+                            <li>
+                                <a href="">绿色</a>
+                            </li>
+                            <li>
+                                <a href="">黑色</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="select-list select-list-result flex-box search-box">
+                        <h5>已选条件:</h5>
+                        <ul class="flex-box">
+                            <li>
+                                <span>
+                                    塑钢
+                                    <a>×</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    中式
+                                    <a>×</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    厨房
+                                    <a>×</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    白枫色
+                                    <a>×</a>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="col-lg-4 no-padding">
+                            <input type="text" class="form-control" name="keyword" placeholder="卧室实木门窗">
+                            <button class="btn btn-warning">搜索</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="case-list col-lg-12 no-padding">
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-body">
-                            <a href="#">
-                                <img src="./images/u5529.jpg">
-                            </a>
-                            <dt>方案名称</dt>
-                            <dd>方案简介方案简介方案简介</dd>
-                            <div class="directory-info-row">  
-                                <ul class="social-links">
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="赞">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </a>
-                                        1230
-                                    </li>
-                                    <li>
-                                        <a class="tooltips" href="" data-original-title="评论">
-                                            <i class="fa fa-comments"></i>
-                                        </a>
-                                        300
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-body">
+                        <a href="#">
+                            <img src="./images/u5529.jpg">
+                        </a>
+                        <dt>方案名称</dt>
+                        <dd>方案简介方案简介方案简介</dd>
+                        <div class="directory-info-row">  
+                            <ul class="social-links">
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="赞">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </a>
+                                    1230
+                                </li>
+                                <li>
+                                    <a class="tooltips" href="" data-original-title="评论">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                    300
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
         <!--body wrapper end-->
